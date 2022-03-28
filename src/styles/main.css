@@ -1,0 +1,46 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /* COLORS */
+  --color-primary: "#00CBA9";
+  --color-secondary: "#3462AC";
+  --color-dark-gray: "#313230";
+  --color-light-yellow: "#FFD97D";
+
+  /* FONTS */
+  --ft-open-sans: "Open Sans", Helvetica, Arial, sans-serif;
+  --ft-poppins: "Poppins", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--ft-open-sans);
+}
+
+/*-----------------------------------*\
+  #REUSED COMPONENTS
+\*-----------------------------------*/
+
+.btn {
+  border: none;
+}
