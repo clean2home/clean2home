@@ -26,7 +26,8 @@
     <header>
       <nav class="menu">
         <div class="logo">
-          <img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" />
+          <!-- TODO: He puesto el width del logo aquí para que no tape toda la pagina, cambiarlo y ponerlo en CSS -->
+          <img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" width="200px"/>
         </div>
         <ul>
           <li>
@@ -46,24 +47,26 @@
     </header>
     <main>
       <section class="home">
-        <h1 class="home-slogan">Lleva el <strong>orden</strong> a tu hogar</h1>
-        <h2 class="home-description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </h2>
-        <p class="home-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-          eveniet commodi quidem suscipit, voluptatum laborum, dolorum minima,
-          error vitae quas quo itaque amet autem? Molestias aliquid ullam
-          similique fugit quae.
-        </p>
-        <form class="home-form">
-          <div class="home-form-group">
-            <input type="text" placeholder="Introduce C.P. o ciudad" />
-            <button>Buscar</button>
-          </div>
-        </form>
+        <div>
+          <h1 class="home-slogan">Lleva el <strong>orden</strong> a tu hogar</h1>
+          <h2 class="home-description">
+            Contrata Cleaners cerca de ti
+          </h2>
+          <p class="home-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+            eveniet commodi quidem suscipit, voluptatum laborum, dolorum minima,
+            error vitae quas quo itaque amet autem?
+          </p>
+          <form class="home-form">
+              <input type="text" placeholder="Introduce C.P. o ciudad" />
+              <button class="btn home-btn">Buscar</button>
+          </form>
+        </div>
         <img src="./assets/home-illustration.svg" alt="" />
       </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#00cba9" fill-opacity="1" d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
       <section class="info-clients">
         <article class="info-client-box">
           <img src="./assets/info-map.svg" alt="" />

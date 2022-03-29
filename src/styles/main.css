@@ -1,46 +1,117 @@
-/*-----------------------------------*\
+/* -----------------------------------*\
   #CUSTOM PROPERTY
-\*-----------------------------------*/
+\*----------------------------------- */
 
 :root {
   /* COLORS */
-  --color-primary: "#00CBA9";
-  --color-secondary: "#3462AC";
-  --color-dark-gray: "#313230";
-  --color-light-yellow: "#FFD97D";
+  --color-primary: #00cba9;
+  --color-secondary: #3462ac;
+  --color-secondary-dark: #26477e;
+  --color-secondary-very-dark: #172b4b;
+  --color-dark-gray: #313230;
+  --color-light-yellow: #ffd97d;
 
   /* FONTS */
-  --ft-open-sans: "Open Sans", Helvetica, Arial, sans-serif;
-  --ft-poppins: "Poppins", "Open Sans", Helvetica, Arial, sans-serif;
+  --ff-open-sans: "Open Sans", helvetica, arial, sans-serif;
+  --ff-poppins: "Poppins", "Open Sans", helvetica, arial, sans-serif;
 }
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #RESET
-\*-----------------------------------*/
+\*----------------------------------- */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
+
 img {
   display: block;
 }
 
 body {
-  font-family: var(--ft-open-sans);
+  font-family: var(--ff-open-sans);
 }
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #REUSED COMPONENTS
-\*-----------------------------------*/
+\*----------------------------------- */
 
 .btn {
+  cursor: pointer;
   border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  font-family: var(--ff-poppins);
+  border-radius: 1em;
+}
+
+/* -----------------------------------*\
+  #HOME
+\*----------------------------------- */
+
+.home {
+  padding: 0 20em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+  align-items: center;
+}
+
+.home-slogan {
+  font-family: var(--ff-poppins);
+  font-size: 5em;
+  line-height: 1;
+}
+
+.home-slogan strong {
+  color: var(--color-primary);
+}
+
+.home-description {
+  font-family: var(--ff-poppins);
+  margin: 1em 0 0.5em;
+  font-size: 2.2em;
+}
+
+.home-text {
+  font-size: 1.2em;
+}
+
+.home-form input {
+  font-family: var(--ff-poppins);
+  background: rgb(236 236 236);
+  border-radius: 0.8em;
+  border: none;
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.home-form input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+.home-btn {
+  background: var(--color-secondary);
+  box-shadow: 0 8px 0  var(--color-secondary-very-dark);
+  color: white;
+}
+
+.home-btn:hover {
+  background: var(--color-secondary-dark);
 }
