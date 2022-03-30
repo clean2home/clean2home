@@ -115,3 +115,90 @@ body {
 .home-btn:hover {
   background: var(--color-secondary-dark);
 }
+
+/* -----------------------------------*\
+  #CAROUSEL
+\*----------------------------------- */
+
+.slider {
+  border-radius: 5px;
+  box-shadow: 5px 5px hsl(0deg 0% 76%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slider ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider ul li {
+  position: relative;
+  display: none;
+  height: 350px;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+.slider ul li img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.slider ul li span {
+  position: absolute;
+  bottom: 0;
+  background: hsl(0deg 1% 72% / 10%);
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.slider .buttons {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.slider .buttons .next {
+  font-size: 2rem;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+}
+
+.slider .buttons .prev {
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+}
+
+.slider .buttons .next:hover {
+  background: hsl(0deg 0% 25%);
+  color: hsl(0deg 0% 93%);
+}
+
+.slider .buttons .prev:hover {
+  background: hsl(0deg 0% 25%);
+  color: hsl(0deg 0% 93%);
+}
+
+.gatos {
+  width: 10px;
+}
+
+@keyframes fade {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
