@@ -71,10 +71,10 @@ body {
   font-family: var(--ff-poppins);
   font-size: 5em;
   line-height: 1;
-}
 
-.home-slogan strong {
-  color: var(--color-primary);
+  & strong {
+    color: var(--color-primary);
+  }
 }
 
 .home-description {
@@ -89,7 +89,7 @@ body {
 
 .home-form input {
   font-family: var(--ff-poppins);
-  background: rgb(236 236 236);
+  background: #ececec;
   border-radius: 0.8em;
   border: none;
   display: block;
@@ -98,22 +98,22 @@ body {
   padding: 1em;
   font-size: 1.5em;
   margin-bottom: 1em;
-}
 
-.home-form input:focus {
-  border: none;
-  outline: none;
-  box-shadow: 0 0 5px var(--color-primary);
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px var(--color-primary);
+  }
 }
 
 .home-btn {
   background: var(--color-secondary);
   box-shadow: 0 8px 0  var(--color-secondary-very-dark);
   color: white;
-}
 
-.home-btn:hover {
-  background: var(--color-secondary-dark);
+  &:hover {
+    background: var(--color-secondary-dark);
+  }
 }
 
 /* -----------------------------------*\
