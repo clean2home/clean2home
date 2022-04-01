@@ -202,3 +202,25 @@ body {
   from { opacity: 0.2; }
   to { opacity: 1; }
 }
+
+/* -----------------------------------*\
+  #WORK WITH US
+\*----------------------------------- */
+
+.work-with-us {
+  margin: 10%;
+  max-width: fit-content;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.work-with-us > p {
+  margin-top: 2em;
+  text-align: justify;
+}
+
+.work-with-us-btn {
+  margin: 2em;
+  width: 22em;
+}
