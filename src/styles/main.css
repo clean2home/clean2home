@@ -117,6 +117,52 @@ body {
 }
 
 /* -----------------------------------*\
+  #INFO_CLIENTES
+\*----------------------------------- */
+
+.container-client {
+  margin: 200px;
+  margin-left: 400px;
+  margin-right: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info-client-box {
+  padding: 25px;
+  padding-top: 80px;
+  width: 250px;
+  height: 370px;
+  background-color: #ffd97d;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 5px 9px 2px #0000003e;
+}
+
+.icons-clients {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 25px;
+  top: -130px;
+  filter: drop-shadow(5px 4px 6px rgb(0 0 0 / 24.7%));
+}
+
+.info-client-box-title {
+  font-family: var(--ff-poppins);
+  color: #313230;
+  text-align: center;
+}
+
+.info-clients p {
+  margin-top: 25px;
+  font-family: var(--ff-open-sans);
+  color: #313230;
+  text-align: center;
+}
+
+/* -----------------------------------*\
   #CAROUSEL
 \*----------------------------------- */
 
