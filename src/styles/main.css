@@ -270,3 +270,45 @@ body {
   margin: 2em;
   width: 22em;
 }
+
+/* -----------------------------------*\
+  #FOOTER
+\*----------------------------------- */
+
+.footer {
+  background-color: #545454;
+  color: white;
+  display: flex;
+  width: 100vw;
+  height: 340px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style-position: inside;
+}
+
+.column {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-elements {
+  margin: 0.5em;
+}
