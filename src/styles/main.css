@@ -122,18 +122,19 @@ body {
 
 .container-client {
   background: var(--color-primary);
-  padding: 10em 20em;
+  padding: 6em 20em;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: space-around;
 }
 
 .info-client-box {
   font-size: 1.1em;
-  padding: 4em;
+  padding: 2.4em;
+  width: 25%;
   max-width: 350px;
-  height: 550px;
-  background-color: #ffd97d;
+  height: 500px;
+  background-color: white;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -144,8 +145,8 @@ body {
 }
 
 .icons-clients {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   position: absolute;
   top: -130px;
   right: 50;
@@ -154,18 +155,47 @@ body {
 }
 
 .info-client-box-title {
-  font-size: 1.4em;
-  margin-top: 2em;
+  font-size: 1.3em;
+  margin-top: 0.1em;
   font-family: var(--ff-poppins);
-  color: #313230;
+  color: var(--color-dark-gray);
   text-align: center;
 }
 
 .info-clients p {
   margin-top: 3em;
   font-family: var(--ff-open-sans);
-  color: #313230;
+  color: var(--color-dark-gray);
   text-align: center;
+  font-size: 1em;
+}
+
+.button-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: var(--color-primary);
+}
+
+.client-button {
+  width: 22em;
+  padding: 15px 20px;
+  border-radius: 0.8em;
+  color: var(--color-dark-gray);
+  background-color: var(--color-light-yellow);
+  font-family: var(--ff-poppins);
+  font-size: 1.3em;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  outline: none;
+  margin: 0.5em;
+  box-shadow: 0 8px 0 #c18c32;
+}
+
+.client-button:hover {
+  color: var(--color-primary);
+  opacity: 0.9;
 }
 
 /* -----------------------------------*\
