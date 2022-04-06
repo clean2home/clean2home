@@ -307,21 +307,63 @@ body {
 \*----------------------------------- */
 
 .work-with-us {
-  margin: 10%;
-  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
 }
 
 .work-with-us > p {
-  margin-top: 2em;
-  text-align: justify;
+  margin: 35px 12%;
 }
 
 .work-with-us-btn {
-  margin: 2em;
+  margin: 0 15% 10%;
   width: 22em;
+  max-width: 90%;
+}
+
+/* -----------------------------------*\
+  #FOOTER
+\*----------------------------------- */
+
+.footer {
+  background-color: #545454;
+  color: white;
+  display: flex;
+  width: 100vw;
+  height: 340px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style-position: inside;
+}
+
+.column {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-elements {
+  margin: 0.5em;
 }
 
 /* CSS ÁLVARO */
