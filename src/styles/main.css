@@ -449,4 +449,8 @@ body {
   .home .home-slogan {
     font-size: 3em;
   }
+
+  .home img {
+    width: 80%;
+  }
 }
