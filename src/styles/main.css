@@ -60,7 +60,8 @@ body {
 \*----------------------------------- */
 
 .home {
-  padding: 0 20em;
+  margin: auto;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5em;
@@ -69,7 +70,7 @@ body {
 
 .home-slogan {
   font-family: var(--ff-poppins);
-  font-size: 5em;
+  font-size: 4em;
   line-height: 1;
 
   & strong {
@@ -80,7 +81,7 @@ body {
 .home-description {
   font-family: var(--ff-poppins);
   margin: 1em 0 0.5em;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .home-text {
@@ -412,3 +413,45 @@ body {
 }
 
 /* CSS ÁLVARO */
+
+@media (max-width: 1440px) {
+  .home {
+    font-size: 15px;
+  }
+
+  .home-slogan {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    grid-template-columns: auto;
+    width: 80%;
+    font-size: 14px;
+    justify-items: center;
+  }
+
+  .home .home-slogan {
+    font-size: 5em;
+  }
+
+  .home img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  .home .home-slogan {
+    font-size: 3em;
+  }
+
+  .home img {
+    width: 80%;
+  }
+}
