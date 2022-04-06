@@ -338,13 +338,14 @@ body {
   background-color: var(--color-light-yellow);
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .yellow p {
   color: white;
-  font-family: "Poppins";
+  font-family: var(--ff-poppins);
   font-weight: bold;
-  text-shadow: 0px 1.5px 0px rgba(50, 50, 50, 0.3);
+  text-shadow: 0 1.5px 0 rgb(50 50 50 / 30%);
   padding-top: -300px;
 }
 
@@ -354,19 +355,18 @@ body {
   margin-right: 5%;
 }
 
-
 .btn-teal {
   background-color: #00cba9;
   width: 280px;
   height: 60px;
   border-radius: 20px;
-  box-shadow: 0px 5px teal;
+  box-shadow: 0 5px teal;
   color: white;
   display: flex;
   justify-content: center;
   margin-right: 3%;
-  font-family: "Poppins";
+  font-family: var(--ff-poppins);
   border: none;
 }
 
-  /* CSS ÁLVARO */
+/* CSS ÁLVARO */
