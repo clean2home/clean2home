@@ -123,7 +123,7 @@ body {
 
 .container-client {
   background: var(--color-primary);
-  padding: 3em 26em;
+  padding: 3em 30em;
   display: flex;
   flex: 1 1 auto;
   align-content: center;
@@ -145,13 +145,12 @@ body {
 
 .info-client-box {
   box-sizing: border-box;
-  margin: 0.8em;
+  margin: 1em;
   margin-top: 3em;
   font-size: 1em;
   padding: 2.4em;
   padding-bottom: 4em;
-  width: 100%;
-  max-width: 310px;
+  width: 50%;
   min-width: 310px;
   background-color: white;
   border-radius: 20px;
@@ -200,8 +199,8 @@ body {
 }
 
 .client-button {
-  width: 22em;
-  max-width: 20em;
+  width: 100%;
+  max-width: 19em;
   padding: 15px 20px;
   border-radius: 0.8em;
   color: var(--color-dark-gray);
@@ -213,6 +212,7 @@ body {
   border: none;
   outline: none;
   margin: 0.5em;
+  margin-bottom: 3em;
   box-shadow: 0 8px 0 #c18c32;
 }
 
