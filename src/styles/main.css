@@ -137,7 +137,7 @@ body {
   font-size: 1em;
   padding: 2.4em;
   padding-bottom: 4em;
-  width: 50%;
+  width: 70%;
   min-width: 310px;
   background-color: white;
   border-radius: 20px;
@@ -175,7 +175,7 @@ body {
   color: var(--color-dark-gray);
   text-align: center;
   font-size: 1em;
-  line-height: 1.8em;
+  line-height: 1.9em;
 }
 
 .button-container {
@@ -440,6 +440,10 @@ body {
     justify-items: center;
     align-items: center;
     flex: 1 1 auto;
+  }
+
+  .info-client-box {
+    margin-top: 8em;
   }
 }
 
