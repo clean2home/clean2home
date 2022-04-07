@@ -56,6 +56,36 @@ body {
 }
 
 /* -----------------------------------*\
+  LOGO & MENU
+\*----------------------------------- */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4em 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+}
+
+.menu-list li {
+  display: inline;
+  margin: 2em;
+  font-family: var(--ff-poppins);
+
+  & a {
+    color: var(--color-dark-gray);
+  }
+
+  & a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* -----------------------------------*\
   #HOME
 \*----------------------------------- */
 
