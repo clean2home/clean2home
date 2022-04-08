@@ -1,4 +1,13 @@
-window.addEventListener("load", () => {
+import Glide from "@glidejs/glide";
+import "@glidejs/glide/dist/css/glide.core.min.css";
+
+new Glide(".glide", {
+  type: "carousel",
+  focusAt: "center",
+  perView: 3,
+}).mount();
+
+/* window.addEventListener("load", () => {
   // slide incial
   let slide = 1;
 
@@ -35,4 +44,4 @@ window.addEventListener("load", () => {
       (i === n) ? slides[n].style.display = "block" : slides[i].style.display = "none";
     }
   }
-});
+}); */

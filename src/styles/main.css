@@ -312,8 +312,14 @@ body {
 }
 
 .gatos {
-  width: 10px;
+  width: 200px;
 }
+/* stylelint-disable */
+
+.glide__slide--active {
+  color: red;
+}
+/* stylelint-enable */
 
 @keyframes fade {
   from { opacity: 0.2; }

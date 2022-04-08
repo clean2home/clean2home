@@ -27,5 +27,8 @@
     "vite": "^2.8.6"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2"
+  }
 }
