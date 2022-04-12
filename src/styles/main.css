@@ -151,20 +151,23 @@ body {
   #INFO_CLIENTES
 \*----------------------------------- */
 
+.info-clients {
+  background-color: var(--color-primary);
+}
+
 .container-client {
+  margin: auto;
+  width: 70%;
   background: var(--color-primary);
-  padding: 3em 30em;
+  padding: 3em 12em;
   display: flex;
-  flex: 1 1 auto;
   align-content: center;
   justify-content: space-around;
 }
 
 .info-client-box {
-  box-sizing: border-box;
   margin: 1em;
   margin-top: 3em;
-  font-size: 1em;
   padding: 2.4em;
   padding-bottom: 4em;
   width: 70%;
@@ -176,15 +179,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex: 1 1 auto;
   box-shadow: 3px 5px 9px 2px #0000003e;
 }
 
 .icons-clients {
   width: 210px;
   height: 210px;
-  position: absolute;
   margin: 30px;
+  position: absolute;
   top: -160px;
   right: 50;
   left: 50;
@@ -234,8 +236,7 @@ body {
 }
 
 .client-button:hover {
-  color: var(--color-primary);
-  opacity: 0.9;
+  background-color: #e5c285;
 }
 
 /* -----------------------------------*\
@@ -446,7 +447,6 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    flex: 1 1 auto;
   }
 
   .info-client-box {
