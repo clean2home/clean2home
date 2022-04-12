@@ -2,6 +2,9 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 
+// Import CSS
+import "./styles/main.css";
+
 // Carousel
 new Glide(".glide", {
   type: "carousel",
