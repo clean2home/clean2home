@@ -5,6 +5,7 @@
 :root {
   /* COLORS */
   --color-primary: #00cba9;
+  --color-primary-dark: #00a88c;
   --color-secondary: #3462ac;
   --color-secondary-dark: #26477e;
   --color-secondary-very-dark: #172b4b;
@@ -292,7 +293,7 @@ body {
 }
 
 .btn-teal {
-  background-color: #00cba9;
+  background-color: var(--color-primary);
   width: 320px;
   height: 60px;
   border-radius: 20px;
@@ -306,6 +307,13 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+.btn-teal:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+
 
 .text .yellow {
   display: flex;
