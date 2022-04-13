@@ -319,12 +319,8 @@ body {
 .footer {
   background-color: #545454;
   color: white;
-  display: flex;
-  width: 100vw;
-  height: 340px;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  width: 100%;
+  padding: 2em;
 
   & a {
     color: white;
@@ -352,6 +348,11 @@ body {
 
 .footer-elements {
   margin: 0.5em;
+}
+
+.legal {
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* CSS ÁLVARO */
@@ -455,5 +456,11 @@ body {
 
   .home .home-slogan {
     font-size: 3em;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
   }
 }
