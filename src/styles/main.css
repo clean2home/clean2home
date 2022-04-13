@@ -465,10 +465,9 @@ body {
   .info-client-box {
     margin-top: 8em;
   }
-
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .home {
     width: 100%;
     padding: 0 1em 2em;
@@ -480,6 +479,40 @@ body {
 
   .home .home-slogan {
     font-size: 3em;
+  }
+
+  .slider-container {
+    padding: 2em 0;
+  }
+
+  .glide__slide {
+    transform: scale(0.9);
+  }
+
+  .glide__slide--active {
+    transform: scale(0.95);
+  }
+
+  .glide__arrow i {
+    font-size: 1.5em;
+  }
+
+  .container,
+  .yellow div {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .yellow p {
+    font-size: 0.6em;
+  }
+
+  .btn-teal {
+    display: inline-block;
   }
 
   .footer-nav {
