@@ -267,7 +267,6 @@ body {
 .container {
   display: flex;
   justify-content: center;
-
 }
 
 .container-2 {
@@ -277,7 +276,6 @@ body {
   background-color: var(--color-light-yellow);
   width: 100%;
   justify-content: center;
-
 }
 
 .yellow p {
@@ -290,7 +288,7 @@ body {
 .text,
 .yellow {
   font-size: 35px;
-  margin: 0% 3% 0% 3%;
+  margin: 0% 3%;
 }
 
 .btn-teal {
@@ -312,9 +310,6 @@ body {
 .btn-teal:hover {
   background-color: var(--color-primary-dark);
 }
-
-
-
 
 .text .yellow {
   display: flex;
@@ -391,11 +386,8 @@ body {
 .footer {
   background-color: #545454;
   color: white;
-  display: flex;
-  height: 340px;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  width: 100%;
+  padding: 2em;
 }
 
 .footer-nav {
@@ -423,6 +415,11 @@ body {
 
 .footer-elements {
   margin: 0.5em;
+}
+
+.legal {
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* -----------------------------------*\
@@ -485,41 +482,10 @@ body {
     font-size: 3em;
   }
 
-  .slider-container {
-    padding: 2em 0;
-  }
-
-  .glide__slide {
-    transform: scale(0.9);
-  }
-
-  .glide__slide--active {
-    transform: scale(0.95);
-  }
-
-  .glide__arrow i {
-    font-size: 1.5em;
-  }
-
-  /* CSS ÁLVARO */
-  .container,
-  .yellow div {
-    display: block;
-    display: flex;
+  .footer-nav {
     flex-direction: column;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 2em;
+    gap: 1em;
   }
-
-  .yellow p {
-    font-size: 0.6em;
-  }
-
-  .btn-teal {
-    display: inline-block;
-  }
-
-  /* CSS ÁLVARO */
-
 }
+
