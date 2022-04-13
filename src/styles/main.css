@@ -139,7 +139,7 @@ body {
 
 .home-btn {
   background: var(--color-secondary);
-  box-shadow: 0 8px 0  var(--color-secondary-very-dark);
+  box-shadow: 0 8px 0 var(--color-secondary-very-dark);
   color: white;
 
   &:hover {
@@ -251,7 +251,7 @@ body {
   text-align: center;
 }
 
-.work-with-us > p {
+.work-with-us>p {
   margin: 35px 12%;
 }
 
@@ -265,6 +265,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
+
 }
 
 .container-2 {
@@ -274,7 +275,7 @@ body {
   background-color: var(--color-light-yellow);
   width: 100%;
   justify-content: center;
-  align-items: center;
+
 }
 
 .yellow p {
@@ -282,18 +283,17 @@ body {
   font-family: var(--ff-poppins);
   font-weight: bold;
   text-shadow: 0 1.5px 0 rgb(50 50 50 / 30%);
-  padding-top: -300px;
 }
 
 .text,
 .yellow {
   font-size: 35px;
-  margin-right: 5%;
+  margin: 0% 3% 0% 3%;
 }
 
 .btn-teal {
   background-color: #00cba9;
-  width: 280px;
+  width: 320px;
   height: 60px;
   border-radius: 20px;
   box-shadow: 0 5px teal;
@@ -303,6 +303,14 @@ body {
   margin-right: 3%;
   font-family: var(--ff-poppins);
   border: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.text .yellow {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 /* CSS ÁLVARO */
@@ -452,6 +460,7 @@ body {
   .info-client-box {
     margin-top: 8em;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -483,4 +492,26 @@ body {
   .glide__arrow i {
     font-size: 1.5em;
   }
+
+  /* CSS ÁLVARO */
+  .container,
+  .yellow div {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .yellow p {
+    font-size: 0.6em;
+  }
+
+  .btn-teal {
+    display: inline-block;
+  }
+
+  /* CSS ÁLVARO */
+
 }
