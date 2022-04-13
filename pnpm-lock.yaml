@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@glidejs/glide': ^3.5.2
   '@stylelint/postcss-css-in-js': ^0.37.2
   eslint: ^8.12.0
   eslint-config-standard: 17.0.0-1
@@ -16,7 +17,10 @@ specifiers:
   postcss-syntax: ^0.36.2
   stylelint: ^14.6.1
   stylelint-config-standard: ^25.0.0
-  vite: ^2.8.0
+  vite: ^2.8.6
+
+dependencies:
+  '@glidejs/glide': 3.5.2
 
 devDependencies:
   '@stylelint/postcss-css-in-js': 0.37.2_3c2bfa735c5d8a8695ad877879a67022
@@ -256,6 +260,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@glidejs/glide/3.5.2:
+    resolution: {integrity: sha512-7jGciNJ2bQ4eZLSNlSZ+VAyW63kALf420CvkEpK4lEsUfWJq9odqimci0YCiyNyMUFB+pWHwLYyNc57dijYsCg==}
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}

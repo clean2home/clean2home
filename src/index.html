@@ -7,16 +7,43 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
     rel="stylesheet" />
+
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
 
-  <link rel="stylesheet" href="./styles/main.css" />
   <script type="module" src="./main.js"></script>
+
+  <!-- META TAGS -->
+  <meta name="description" content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
+  <meta name="keywords" content="limpieza, servicio, limpiador, trabajo"/>
+  <meta name="robots" content="index"/>
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <link rel="canonical" href="https://clean2home.es/" />
+
   <title>Clean2Home</title>
 </head>
 
@@ -24,10 +51,9 @@
   <header>
     <nav class="menu">
       <div class="logo">
-        <!-- TODO: He puesto el width del logo aquí para que no tape toda la pagina, cambiarlo y ponerlo en CSS -->
-        <img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" width="200px" />
+        <img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" />
       </div>
-      <ul>
+      <ul class="menu-list">
         <li>
           <a href="#">Pagina 1</a>
         </li>
@@ -62,7 +88,7 @@
       </div>
       <img src="./assets/home-illustration.svg" alt="" />
     </section>
-    <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+    <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
       <path fill="#00cba9" fill-opacity="1"
         d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
       </path>
@@ -104,11 +130,11 @@
         </article>
       </div>
       <div class="button-container">
-        <a href="#" class="client-button">Buscar</a>
+        <a href="#" class="client-button">Más Información</a>
       </div>
     </section>
     <!-- SECCIÓN INFO CLIENTES -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 224">
       <path fill="#00cba9" fill-opacity="1"
         d="M0,224L60,224C120,224,240,224,360,186.7C480,149,600,75,720,69.3C840,64,960,128,1080,154.7C1200,181,1320,171,1380,165.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
       </path>
@@ -144,52 +170,101 @@
     </div>
     <!-- -->
     <!-- Carrusel -->
-    <section class="review-carousel">
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <img class="gatos"
-              src="https://images.ecestaticos.com/OKY9A7h-Nb78O9EK0PcfakT7Snw=/0x0:2120x1414/1600x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F47b%2F328%2F963%2F47b3289639713b8e80c8d682d219fba7.jpg"
-              alt="imagen1" />
-          </li>
-          <li>
-            <img class="gatos"
-              src="https://ca-times.brightspotcdn.com/dims4/default/16a2bb4/2147483647/strip/true/crop/2048x1108+0+0/resize/1486x804!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F12%2Fa5%2F79e097ccf62312d18a025f22ce48%2Fhoyla-recuento-11-cosas-aman-gatos-top-001"
-              alt="imagen2" />
-          </li>
-          <li>
-            <img class="gatos"
-              src="https://static3.lasprovincias.es/www/multimedia/202112/12/media/cortadas/gatos-kb2-U160232243326NVC-1248x770@Las%20Provincias.jpg"
-              alt="imagen3" />
-          </li>
-          <li>
-            <img class="gatos" src="https://media.timeout.com/images/105645857/750/422/image.jpg" alt="imagen4" />
-          </li>
-        </ul>
-        <div class="buttons">
-          <div class="next">&#10095;</div>
-          <div class="prev">&#10094;</div>
+    <div class="slider-container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide slider-card">
+              <img class="gatos"
+                src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg"
+                alt="imagen2" />
+              <div class="slider-card-stars">
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+              </div>
+              <blockquote class="slider-card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, commodi accusantium a minima
+                  modi ab sunt earum eveniet cumque, quod harum delectus non saepe. Necessitatibus error fuga mollitia
+                  laboriosam sit!</p>
+                <footer>
+                  <cite>Lorem ipsum</cite>
+                  <small>Madrid</small>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="glide__slide slider-card">
+              <img class="gatos"
+                src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg"
+                alt="imagen2" />
+              <div class="slider-card-stars">
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+              </div>
+              <blockquote class="slider-card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, commodi accusantium a minima
+                  modi ab sunt earum eveniet cumque, quod harum delectus non saepe. Necessitatibus error fuga mollitia
+                  laboriosam sit!</p>
+                <footer>
+                  <cite>Lorem ipsum</cite>
+                  <small>Madrid</small>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="glide__slide slider-card">
+              <img class="gatos"
+                src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg"
+                alt="imagen2" />
+              <div class="slider-card-stars">
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+              </div>
+              <blockquote class="slider-card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, commodi accusantium a minima
+                  modi ab sunt earum eveniet cumque, quod harum delectus non saepe. Necessitatibus error fuga mollitia
+                  laboriosam sit!</p>
+                <footer>
+                  <cite>Lorem ipsum</cite>
+                  <small>Madrid</small>
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                class="fi fi-sr-angle-left"></i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                class="fi fi-sr-angle-right"></i></button>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- Carrusel -->
+    </div>
 
     <!-- Botones unete como usuario/cleaner -->
 
     <div class="container">
       <button class="btn btn-teal">
-        <p>Únete como usuario &#8594;</p>
+        <p>Únete como usuario &nbsp; <i class="fi fi-sr-arrow-right"></i></p>
+        
         <!-- 	&#8594; es la flecha-->
       </button>
       <button class="btn btn-teal">
-        <p>Únete como cleaner &#8594;</p>
+        <p>Únete como cleaner &nbsp; <i class="fi fi-sr-arrow-right"></i></p>
       </button>
     </div>
   </main>
   <!--FOOTER -->
   <footer class="footer">
-    <ul class = "footer-nav">
-      <li class = "column">
+    <ul class="footer-nav">
+      <li class="column">
         <h3 class="column-title">Contacto</h3>
         <ul class="items">
           <li>
@@ -201,7 +276,7 @@
 
         </ul>
       </li>
-      <li class = "column">
+      <li class="column">
         <h3 class="column-title">Servicios</h3>
         <ul class="items">
           <li>
@@ -218,8 +293,8 @@
           </li>
         </ul>
       </li>
-      <li class = "column">
-         <h3 class="column-title">Información</h3>
+      <li class="column">
+        <h3 class="column-title">Información</h3>
         <ul class="items">
           <li>
             <a href="#">Sobre nosotros</a>
