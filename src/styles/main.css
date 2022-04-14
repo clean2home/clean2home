@@ -59,7 +59,7 @@ body {
 /* -----------------------------------*\
   LOGO & MENU
 \*----------------------------------- */
-.menu {
+.navbar-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,13 +68,13 @@ body {
   margin: 0 auto;
 }
 
-.logo {
+.navbar-logo {
+  user-select: none;
   width: 200px;
 }
 
-.menu-list li {
+.navbar-links {
   display: inline;
-  margin: 2em;
   font-family: var(--ff-poppins);
 
   & a {
@@ -84,6 +84,10 @@ body {
   & a:hover {
     color: var(--color-primary);
   }
+}
+
+.navbar-toggle {
+  display: none;
 }
 
 /* -----------------------------------*\
@@ -253,7 +257,7 @@ body {
   text-align: center;
 }
 
-.work-with-us>p {
+.work-with-us > p {
   margin: 35px 12%;
 }
 
@@ -468,6 +472,25 @@ body {
 }
 
 @media (max-width: 500px) {
+  .navbar-list {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 0.5em;
+  }
+
+  .active {
+    display: block;
+  }
+
   .home {
     width: 100%;
     padding: 0 1em 2em;
@@ -521,4 +544,3 @@ body {
     gap: 1em;
   }
 }
-
