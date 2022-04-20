@@ -1,10 +1,11 @@
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
-
+import { auth } from "./components/firebase/config";
 // Import CSS
 import "./styles/main.css";
 
+console.log(auth);
 // Carousel
 new Glide(".glide", {
   type: "carousel",

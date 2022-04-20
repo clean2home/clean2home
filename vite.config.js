@@ -1,10 +1,10 @@
-const mode = process.env.NODE_ENV === "production" ? "production" : "development";
+// const mode = process.env.NODE_ENV === "production" ? "production" : "development";
 const base = "/";
 
 module.exports = {
   root: "src",
   base,
-  mode,
+  // mode,
   publicDir: "../public",
   build: {
     outDir: "../dist",
