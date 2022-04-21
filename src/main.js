@@ -1,11 +1,10 @@
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
-import { auth } from "./components/firebase/config";
 // Import CSS
 import "./styles/main.css";
+import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
 
-console.log(auth);
 // Carousel
 new Glide(".glide", {
   type: "carousel",
@@ -36,3 +35,13 @@ function navbarRes() {
   }
 }
 toggleButton.addEventListener("click", navbarRes);
+
+// Modal
+const loginButton = document.querySelector("#login-register");
+const modalLoginRegister = document.querySelector("#login-register-modal");
+const modalClose = document.querySelector("#close-modal");
+const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-register");
+
+loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
+modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
+toggleLoginRegisterButton.forEach(button => button.addEventListener("click", toggleLoginRegisterForm));

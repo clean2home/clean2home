@@ -43,6 +43,28 @@ body {
   font-family: var(--ff-open-sans);
 }
 
+hr {
+  margin: 1em 0;
+  border: none;
+  border-bottom: 1px solid rgb(119 119 119);
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.7em 1em;
+  font-size: 1.1em;
+  border-radius: 0.6em;
+  border: 1px solid var(--color-dark-gray);
+  font-family: var(--ff-poppins), FontAwesome, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3em;
+  color: var(--color-dark-gray);
+}
+
 /* -----------------------------------*\
   #REUSED COMPONENTS
 \*----------------------------------- */
@@ -455,6 +477,114 @@ body {
 }
 
 /* -----------------------------------*\
+  #MODAL
+\*----------------------------------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0 0 0);
+  background-color: rgb(0 0 0 / 40%);
+
+  &.active {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.modal-box {
+  overflow: hidden;
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 2em;
+  border: 1px solid #888;
+  width: 40%;
+  position: relative;
+}
+
+.modal-content {
+  padding: 4em 5em;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.register-block,
+.login-block {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.login-register-form .form-group {
+  margin: 1.3em 0;
+}
+
+.login-btn,
+.register-btn {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.google-btn {
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  background: #4285f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 1em;
+
+  &:hover {
+    background: #357ae8;
+  }
+
+  & .google-icon-wrapper {
+    margin-right: auto;
+    background: white;
+    padding: 0.4em;
+    border-radius: 50%;
+  }
+
+  & .btn-text {
+    margin-right: auto;
+  }
+}
+
+.toggle-login-register {
+  margin-top: 1em;
+  display: block;
+  font-family: var(--ff-poppins);
+  color: var(--color-dark-gray);
+  text-align: center;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* -----------------------------------*\
   #MEDIA QUERIES
 \*----------------------------------- */
 
@@ -534,6 +664,10 @@ body {
     width: 25%;
     margin-bottom: 4em;
   }
+
+  .modal-box {
+    width: 80%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -599,5 +733,9 @@ body {
     flex-direction: column;
     padding: 2em;
     gap: 1em;
+  }
+
+  .modal-box {
+    width: 95%;
   }
 }

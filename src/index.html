@@ -31,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
     rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
 
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
@@ -70,9 +71,72 @@
         <li class="navbar-links">
           <a href="#">Hazte cleaner</a>
         </li>
-
+        <li class="navbar-links">
+          <a href="#" id="login-register">Iniciar sesión</a>
+        </li>
       </ul>
     </nav>
+
+    <!-- Login/Register Modal -->
+    <div id="login-register-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-box">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <div class="login-block active">
+            <h2>Inicia sesión</h2>
+            <form class="login-register-form">
+              <div class="form-group">
+                <label for="emailLogin">Email</label>
+                <input type="email" class="form-control" name="emailLogin" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="passwordLogin">Contraseña</label>
+                <input type="password" class="form-control" name="passwordLogin" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+              </div>
+              <button class="btn login-btn">Iniciar sesión</button>
+            </form>
+            <hr />
+            <div class="btn google-btn">
+              <div class="google-icon-wrapper">
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+              </div>
+              <p class="btn-text"><b>Sign in with Google</b></p>
+            </div>
+            <a href="#" class="toggle-login-register">¿Aún no tienes cuenta? Regístrate</a>
+          </div>
+          <div class="register-block">
+            <h2>Crea una cuenta</h2>
+            <form class="login-register-form">
+              <div class="form-group">
+                <label for="nameRegister">Nombre</label>
+                <input type="text" class="form-control" name="nameRegister" placeholder="&#xf007; tu nombre" />
+              </div>
+              <div class="form-group">
+                <label for="emailRegister">Email</label>
+                <input type="email" class="form-control" name="emailRegister" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Contraseña</label>
+                <input type="password" class="form-control" name="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Repite tu contraseña</label>
+                <input type="password" class="form-control" name="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+              </div>
+              <button class="btn register-btn">Crear cuenta</button>
+            </form>
+            <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+        </div>
+        <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
+          <path fill="#00cba9" fill-opacity="1"
+            d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+    </div>
+
   </header>
   <main>
     <section class="home">
@@ -82,7 +146,7 @@
         </h1>
         <h2 class="home-description">Contrata Cleaners cerca de ti</h2>
         <p class="home-text">
-          En Clean2Home conectamos a gente que busca servicios de limpieza con profesionales locales de confianza. 
+          En Clean2Home conectamos a gente que busca servicios de limpieza con profesionales locales de confianza.
         </p>
         <form class="home-form">
           <input type="text" placeholder="Introduce C.P. o ciudad" />
@@ -179,9 +243,7 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-1.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-1.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -190,7 +252,9 @@
                 <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>Me parece un servicio súper recomendable. El trato del cleaner es inmejorable y lo mejor es que puedes contactar con cualquiera que haya disponible a tiempo real, por lo que si tienes una urgencia viene genial.</p>
+                <p>Me parece un servicio súper recomendable. El trato del cleaner es inmejorable y lo mejor es que
+                  puedes contactar con cualquiera que haya disponible a tiempo real, por lo que si tienes una urgencia
+                  viene genial.</p>
                 <footer>
                   <cite>María P.</cite>
                   <small>Madrid</small>
@@ -198,9 +262,7 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-3.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-3.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -209,7 +271,8 @@
                 <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>Me ha salvado la vida ésta aplicación, muy buenos precios en general y sencilla de utilizar, eliges a tu cleaner, viene a casa y listo. Repetiré seguro.</p>
+                <p>Me ha salvado la vida ésta aplicación, muy buenos precios en general y sencilla de utilizar, eliges a
+                  tu cleaner, viene a casa y listo. Repetiré seguro.</p>
                 <footer>
                   <cite>Eduardo F.</cite>
                   <small>Barcelona</small>
@@ -217,9 +280,7 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-4.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-4.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -228,7 +289,9 @@
                 <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>No sabía muy bien a quién contratar para el servicio de limpieza doméstica, pero viendo las valoraciones de los cleaners es muy fácil decidirte por alguien responsable y de confianza. Un servicio y calidad de 10. </p>
+                <p>No sabía muy bien a quién contratar para el servicio de limpieza doméstica, pero viendo las
+                  valoraciones de los cleaners es muy fácil decidirte por alguien responsable y de confianza. Un
+                  servicio y calidad de 10. </p>
                 <footer>
                   <cite>Cristian M.</cite>
                   <small>Vigo</small>
@@ -236,9 +299,7 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-2.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-2.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -255,9 +316,7 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-6.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-6.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -266,7 +325,8 @@
                 <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>La verdad que es bastante útil para conseguir alguien que te eche una mano en casa cuando te mudas de ciudad y no conoces a nadie para recomendaciones.  </p>
+                <p>La verdad que es bastante útil para conseguir alguien que te eche una mano en casa cuando te mudas de
+                  ciudad y no conoces a nadie para recomendaciones. </p>
                 <footer>
                   <cite>Sara G.</cite>
                   <small>Valencia</small>
@@ -274,9 +334,7 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos"
-                src="./assets/reviewers/review-5.jpg"
-                alt="imagen2" />
+              <img class="gatos" src="./assets/reviewers/review-5.jpg" alt="imagen2" />
               <div class="slider-card-stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
