@@ -161,11 +161,16 @@ body {
 
 .home-btn {
   background: var(--color-secondary);
-  box-shadow: 0 8px 0 var(--color-secondary-very-dark);
+  box-shadow: 0 6px 0 var(--color-secondary-very-dark);
   color: white;
 
   &:hover {
     background: var(--color-secondary-dark);
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 0 var(--color-secondary-very-dark);
+    transition: 0.2s all;
   }
 }
 
@@ -254,11 +259,15 @@ body {
   outline: none;
   margin: 0.5em;
   margin-bottom: 3em;
-  box-shadow: 0 8px 0 #c18c32;
+  box-shadow: 0 6px 0 #c18c32;
 }
 
 .client-button:hover {
   background-color: #e5c285;
+}
+
+.client-button:active {
+  box-shadow: inset 0 4px 0 #c18c32;
 }
 
 /* -----------------------------------*\
@@ -336,6 +345,10 @@ body {
 
 .btn-teal:hover {
   background-color: var(--color-primary-dark);
+}
+
+.btn-teal:active {
+  box-shadow: inset 0 4px teal;
 }
 
 .text .yellow {
