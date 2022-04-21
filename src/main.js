@@ -1,9 +1,10 @@
+// Import CSS
+import "./styles/main.css";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
-// Import CSS
-import "./styles/main.css";
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
+import { startLoginWithEmail, startRegisterWithEmail } from "./components/actions/auth/auth";
 
 // Carousel
 new Glide(".glide", {
@@ -45,3 +46,24 @@ const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-regis
 loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
 modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
 toggleLoginRegisterButton.forEach(button => button.addEventListener("click", toggleLoginRegisterForm));
+
+const loginForm = document.querySelector("#login-form");
+const registerForm = document.querySelector("#register-form");
+
+registerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = registerForm.nameRegister.value;
+  const email = registerForm.emailRegister.value;
+  const password = registerForm.passwordRegister.value;
+  const passwordRepeat = registerForm.passwordRepeatRegister.value;
+
+  startRegisterWithEmail(name, email, password, passwordRepeat);
+});
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = loginForm.emailLogin.value;
+  const password = loginForm.passwordLogin.value;
+
+  startLoginWithEmail(email, password);
+});
