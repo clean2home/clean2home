@@ -1,0 +1,52 @@
+.funciona-slogan {
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1;
+}
+
+.funciona-slogan strong {
+    color: #00cba9;
+}
+
+.container-steps{
+  width: 70%;
+  height: 60em;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.steps-left {
+  position: relative;
+  width: 50%;
+  height: 160px;
+  border-right: 1px dashed #dbdbdb;
+  text-align: right;
+  margin-top: 2em;
+}
+.icon{
+  background-color: blue;
+  border: 0;
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+  margin: 1em;
+}
+.step-right {
+  position: relative;
+  width: 50%;
+  height: 160px;
+  margin-left: 50%;
+  margin-top: 2em;
+  border-left: 1px dashed #dbdbdb;
+  text-align: left;
+}
+
+.explain-left {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
