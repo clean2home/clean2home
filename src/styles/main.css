@@ -124,6 +124,21 @@ label {
   }
 }
 
+.navbar-user {
+  display: flex;
+  font-size: 1.4em;
+  flex-direction: row;
+  align-items: center;
+
+  & img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 1em;
+  }
+}
+
 .navbar-toggle {
   display: none;
   font-size: 1.5em;

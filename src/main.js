@@ -5,6 +5,18 @@ import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
 import { startLoginWithEmail, startRegisterWithEmail, validateFields } from "./components/actions/auth/auth";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./components/firebase/config";
+import { setupUI, setupUserUI } from "./components/actions/ui/navbar";
+
+// Get user
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    setupUserUI(user);
+  } else {
+    setupUI();
+  }
+});
 
 // Carousel
 new Glide(".glide", {

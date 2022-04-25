@@ -1,10 +1,11 @@
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebase/config";
 import { isEmail, isStrongPassword } from "validator";
 import isAlpha from "validator/lib/isAlpha";
+import { toggleModal } from "../ui/modal";
 
-const registerForm = document.querySelector("#register-form");
-console.log(registerForm);
+const modalLoginRegister = document.querySelector("#login-register-modal");
+
 export const startRegisterWithEmail = (name, email, password, rpPassword) => {
   // Validación campos
   if (validateFields(name, email, password, rpPassword)) {
@@ -32,8 +33,21 @@ const registerWithEmail = (name, email, password) => {
 
 export const startLoginWithEmail = (email, password) => {
   // Validación campos
-  console.log(email, password);
+  loginWithEmail(email, password);
   // Llamar a funcion firebase
+};
+
+const loginWithEmail = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+    .then(async({ user }) => {
+      console.log(user);
+      toggleModal(modalLoginRegister);
+    })
+    .catch((error) => {
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+      console.log(error);
+    });
 };
 
 export const validateFields = (name, email, password, passwordRepeat) => {

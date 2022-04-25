@@ -1,4 +1,9 @@
+const registerForm = document.querySelector("#register-form");
+const loginForm = document.querySelector("#login-form");
+
 export const toggleModal = (modal) => {
+  registerForm.reset();
+  loginForm.reset();
   modal.classList.toggle("active");
 };
 
