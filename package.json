@@ -30,6 +30,7 @@
   "license": "ISC",
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
-    "firebase": "^9.6.11"
+    "firebase": "^9.6.11",
+    "validator": "^13.7.0"
   }
 }

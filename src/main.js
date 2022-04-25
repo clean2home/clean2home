@@ -4,7 +4,7 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
-import { startLoginWithEmail, startRegisterWithEmail } from "./components/actions/auth/auth";
+import { startLoginWithEmail, startRegisterWithEmail, validateFields } from "./components/actions/auth/auth";
 
 // Carousel
 new Glide(".glide", {
@@ -67,3 +67,11 @@ loginForm.addEventListener("submit", (e) => {
 
   startLoginWithEmail(email, password);
 });
+
+registerForm.addEventListener("blur", function(event) {
+  const name = registerForm.nameRegister.value;
+  const email = registerForm.emailRegister.value;
+  const password = registerForm.passwordRegister.value;
+  const passwordRepeat = registerForm.passwordRepeatRegister.value;
+  validateFields(name, email, password, passwordRepeat);
+}, true);
