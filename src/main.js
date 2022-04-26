@@ -4,13 +4,14 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
-import { startLoginWithEmail, startRegisterWithEmail, validateFields } from "./components/actions/auth/auth";
+import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, validateFields } from "./components/actions/auth/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./components/firebase/config";
 import { setupUI, setupUserUI } from "./components/actions/ui/navbar";
 
 // Get user
 onAuthStateChanged(auth, (user) => {
+  console.log(user);
   if (user) {
     setupUserUI(user);
   } else {
@@ -54,6 +55,7 @@ const loginButton = document.querySelector("#login-register");
 const modalLoginRegister = document.querySelector("#login-register-modal");
 const modalClose = document.querySelector("#close-modal");
 const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-register");
+const googleLoginButton = document.querySelector(".google-btn");
 
 loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
 modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
@@ -87,3 +89,5 @@ registerForm.addEventListener("blur", function(event) {
   const passwordRepeat = registerForm.passwordRepeatRegister.value;
   validateFields(name, email, password, passwordRepeat);
 }, true);
+
+googleLoginButton.addEventListener("click", () => startLoginWithGoogle());
