@@ -1,8 +1,8 @@
 const cleaners = [
-  { name: "Pedro Pascal", description: "Lorem impsum noseque", image: "../assets/profile-ponytail.svg", worksCount: 185, rating: 5, price: "15,00€" },
-  { name: "Mery Jane", description: "Lorem impsum 2222222Lorem dsfkfjsdk klsdjfkdsljflljfks slkdjfklsdjkfjsd lsdkjfskdjflksdfj sldkjfksdjflsdkj lskdfjlskdjf lsdkjfsdkljfksdjf lskdjflksdjfsdlk sldkjfksldjfksd sldkfjkdslfjksldf slkdjfklsdfj lksd impsum 2222222Lorem impsum 2222222Lorem impsum 2222222", image: "../assets/profile-guy-glasses.svg", worksCount: 519, rating: 5, price: "16,00€" },
-  { name: "Maria Fernandez", description: "Lorem impsum aaaaaaaa sdf f sdfsdfs sdfsd sdfsdf sdfsdf  sdfsdfsdf sdfsdfsdfd aaaaaa", image: "../assets/profile_pic.svg", worksCount: 1589, rating: 4, price: "25,00€" },
-  { name: "Juan antonio", description: "Este es juan antonio", image: "../assets/profile-ponytail.svg", worksCount: 23, rating: 2, price: "45,00€" }
+  { name: "Mery Jane", description: "Hola soy Mery, ¡encantada de conocerte! Llevo más de 10 años dedicándome al servicio doméstico, también puedo cocinar en las horas de trabajo. Tengo buena mano y buen gusto a la hora de ordenar y dedicación por completo.", image: "../assets/profile-ponytail.svg", worksCount: 185, rating: 3, price: "12,00€" },
+  { name: "Pedro Pascal", description: "Chico muy serio en su trabajo, con más de 8 años de experiencia laboral demostrada. Trato todo tipo de superficies con delicadezza y cuido hasta el más mínimo detalle. Tengo disponibilidad horaria total.", image: "../assets/profile-guy-glasses.svg", worksCount: 519, rating: 5, price: "16,00€" },
+  { name: "Maria Fernandez", description: "Me llamo María y llevo toda la vida trabajando como limpiadora. Estaré encantada de cuidar tu hogar como se merece.", image: "../assets/profile_pic.svg", worksCount: 1589, rating: 4, price: "20,00€" },
+  { name: "Natalia Amorós", description: "Limpiadora con más de 5 años de experiencia, disponibilidad total de horario, festivos incluídos. Soy rápida a la par que eficaz en mi trabajo. ¡No dudes en llamarme!", image: "../assets/profile-ponytail.svg", worksCount: 105, rating: 5, price: "15,00€" }
 ];
 
 const divContainerCards = document.querySelector(".container-cards");
@@ -31,3 +31,15 @@ cleaners.forEach((cleaner) => {
 
   divContainerCards.innerHTML += cleanerCard;
 });
+
+// ESTOY PROBANDO ESTA FUNCIÓN QUE LIMITA EL NÚMERO DE CARACTERES.
+
+// const parrafo = document.querySelector(".cleaner-info-p");
+
+// function limitar(parrafo) {
+//   if (parrafo.length > 230) parrafo.innerText = parrafo.substring(0, 230);
+// }
+
+// limitar(parrafo);
+
+// console.log(parrafo.length);
