@@ -599,10 +599,32 @@ label {
   }
 }
 
+.error-email,
+.error-name,
+.error-pass,
+.error-passrep {
+  border-color: red;
+}
+
+.error-email-msg-hidden,
+.error-name-msg-hidden,
+.error-pass-msg-hidden,
+.error-passrep-msg-hidden {
+  display: none;
+  color: red;
+}
+
+.error-email-msg,
+.error-name-msg,
+.error-pass-msg,
+.error-passrep-msg {
+  display: block;
+  color: red;
+}
+
 /* -----------------------------------*\
   #MEDIA QUERIES
 \*----------------------------------- */
-
 @media (max-width: 1440px) {
   .home {
     font-size: 15px;

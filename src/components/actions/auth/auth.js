@@ -51,14 +51,26 @@ const loginWithEmail = (email, password) => {
 };
 
 export const validateFields = (name, email, password, passwordRepeat) => {
+  const nameField = document.querySelector("#nameRegister");
+  const nameErrorMessage = document.querySelector(".error-name-msg-hidden");
+  const emailField = document.querySelector("#emailRegister");
+  const emailErrorMessage = document.querySelector(".error-email-msg-hidden");
+  const passField = document.querySelector("#passwordRegister");
+  const passErrorMessage = document.querySelector(".error-pass-msg-hidden");
+  const passRepField = document.querySelector("#passwordRepeatRegister");
+  const passRepErrorMessage = document.querySelector(".error-passrep-msg-hidden");
   if (name && !isAlpha(name)) {
-    console.log("Checking name validator");
+    nameField.classList.add("error-name");
+    nameErrorMessage.classList.add("error-name-msg");
   } else if (email && !isEmail(email)) {
-    console.log("Checking email validator");
+    emailField.classList.add("error-email");
+    emailErrorMessage.classList.add("error-email-msg");
   } else if (password && !isStrongPassword(password, { minLength: 6, minSymbols: 0 })) {
-    console.log("Checking password validator");
+    passField.classList.add("error-pass");
+    passErrorMessage.classList.add("error-pass-msg");
   } else if (passwordRepeat && password !== passwordRepeat) {
-    console.log("Checking password repeat validator");
+    passRepField.classList.add("error-passrep");
+    passRepErrorMessage.classList.add("error-passrep-msg");
   } else if (name && email && password && passwordRepeat) {
     return true;
   }
