@@ -15,6 +15,6 @@ module.exports = {
         main: resolve(__dirname, "src/index.html"),
         nested: resolve(__dirname, "src/cleaners/"),
       }
+    }
   }
-}
 };
