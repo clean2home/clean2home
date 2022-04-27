@@ -20,10 +20,12 @@ const registerWithEmail = (name, email, password) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then(async({ user }) => {
       const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
-      await updateProfile(user, { displayName: name, photoURL: profileImage });
+      updateProfile(user, { displayName: name, photoURL: profileImage });
+      setupUserUI(user);
+      toggleModal(modalLoginRegister);
       Swal.fire({
         title: "Registro correcto",
-        text: "Ahora ya puedes iniciar sesión con tu cuenta",
+        text: "Ahora ya puedes empezar a buscar Cleaners en tu zona",
         icon: "success",
       });
     })
@@ -125,5 +127,9 @@ export const validateFields = (name, email, password, passwordRepeat) => {
     passRepErrorMessage.classList.add("error-passrep-msg");
   } else if (name && email && password && passwordRepeat) {
     return true;
+  }
+  if (email && isEmail(email)) {
+    emailField.classList.remove("error-email");
+    emailErrorMessage.classList.remove("error-email-msg");
   }
 };
