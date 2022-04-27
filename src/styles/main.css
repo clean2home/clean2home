@@ -125,7 +125,7 @@ label {
 }
 
 .navbar-user {
-  display: flex;
+  display: none;
   font-size: 1.4em;
   flex-direction: row;
   align-items: center;

@@ -18,9 +18,7 @@ export const startRegisterWithEmail = (name, email, password, rpPassword) => {
 
 const registerWithEmail = (name, email, password) => {
   createUserWithEmailAndPassword(auth, email, password)
-    // https://api.multiavatar.com/Binx%20Bond.png
     .then(async({ user }) => {
-    // Signed in
       const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
       await updateProfile(user, { displayName: name, photoURL: profileImage });
       Swal.fire({
@@ -28,7 +26,6 @@ const registerWithEmail = (name, email, password) => {
         text: "Ahora ya puedes iniciar sesión con tu cuenta",
         icon: "success",
       });
-    // ...
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -38,7 +35,6 @@ const registerWithEmail = (name, email, password) => {
         icon: "error",
         confirmButtonColor: "#00cba9"
       });
-    // ..
     });
 };
 
@@ -78,7 +74,12 @@ export const startLoginWithGoogle = () => {
   signInWithPopup(auth, provider)
     .then(async({ user }) => {
       const name = user.displayName.split(" ")[0];
-      await updateProfile(user, { displayName: name });
+      updateProfile(user, { displayName: name });
+      if (!user.photoURL) {
+        const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
+        await updateProfile(user, { photoURL: profileImage });
+      }
+      setupUserUI(user);
       Swal.fire({
         icon: "success",
         title: "Inicio de sesión correcto",
@@ -87,7 +88,6 @@ export const startLoginWithGoogle = () => {
         showConfirmButton: false,
         allowOutsideClick: false
       }).then((result) => {
-        setupUserUI(user);
         toggleModal(modalLoginRegister);
       });
     }).catch((error) => {
