@@ -208,7 +208,7 @@ body {
   justify-content: center;
 }
 
-.cleaner-image > img {
+.cleaner-image>img {
   width: 130px;
   height: 130px;
 }
@@ -406,8 +406,7 @@ body {
     padding: 10px;
     width: 100%;
     min-width: 350px;
-    font-size: 2.3em;
-    text-align: center;
+    font-size: 2.8em;
   }
 
   .cleaners-form {
@@ -480,5 +479,13 @@ body {
     flex-direction: column;
     padding: 2em;
     gap: 1em;
+  }
+
+  .search {
+    max-width: 150px;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.1em;
+    align-self: flex-start;
   }
 }

@@ -7,6 +7,12 @@ const cleaners = [
 
 const divContainerCards = document.querySelector(".container-cards");
 
+function shortComment(element) { //Se le pasa un elemento directamente
+
+  if (element.textContent.length > 230) element.textContent = `${element.textContent.substring(0, 227)}...`;
+
+}
+
 cleaners.forEach((cleaner) => {
   const cleanerCard = `<div class="cleaner-container">
   <div class="cleaner-image"> <!-- imagen -->
@@ -31,6 +37,11 @@ cleaners.forEach((cleaner) => {
 
   divContainerCards.innerHTML += cleanerCard;
 });
+
+
+
+let descriptionParagraph = document.querySelectorAll(".cleaner-info-p");
+descriptionParagraph.forEach(e => shortComment(e));
 
 // ESTOY PROBANDO ESTA FUNCIÓN QUE LIMITA EL NÚMERO DE CARACTERES.
 
