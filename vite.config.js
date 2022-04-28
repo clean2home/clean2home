@@ -3,6 +3,7 @@ const base = "/";
 const { resolve } = require("path");
 
 module.exports = {
+  envDir: "../",
   root: "src",
   base,
   mode,

@@ -31,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link defer href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
     rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
 
   <!-- ICONS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
@@ -73,9 +74,82 @@
         <li class="navbar-links">
           <a href="#">Hazte cleaner</a>
         </li>
-
+        <li class="navbar-links">
+          <a href="#" id="login-register">Iniciar sesión</a>
+        </li>
+        <li class="navbar-links">
+          <div class="navbar-user">
+            <span id="navbar-name"></span>
+            <img referrerpolicy="no-referrer" id="navbar-img" src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" alt="user-image">
+          </div>
+        </li>
       </ul>
     </nav>
+
+    <!-- Login/Register Modal -->
+    <div id="login-register-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-box">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <div class="login-block active">
+            <h2>Inicia sesión</h2>
+            <form action="POST" class="login-register-form" id="login-form">
+              <div class="form-group">
+                <label for="emailLogin">Email</label>
+                <input type="email" class="form-control" name="emailLogin" id="emailLogin" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="passwordLogin">Contraseña</label>
+                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+              </div>
+              <button class="btn login-btn">Iniciar sesión</button>
+            </form>
+            <hr />
+            <div class="btn google-btn">
+              <div class="google-icon-wrapper">
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+              </div>
+              <p class="btn-text"><b>Sign in with Google</b></p>
+            </div>
+            <a href="#" class="toggle-login-register">¿Aún no tienes cuenta? Regístrate</a>
+          </div>
+          <div class="register-block">
+            <h2>Crea una cuenta</h2>
+            <form action="POST" class="login-register-form" id="register-form">
+              <div class="form-group">
+                <label for="nameRegister">Nombre</label>
+                <input type="text" class="form-control" name="nameRegister"  id="nameRegister" placeholder="&#xf007; tu nombre" />
+                <label class="error-name-msg-hidden">Nombre introducido inválido</label>
+              </div>
+              <div class="form-group">
+                <label for="emailRegister">Email</label>
+                <input type="email" class="form-control" name="emailRegister" id="emailRegister" placeholder="&#xf0e0; tu@email.com" />
+                <label class="error-email-msg-hidden">Email introducido inválido</label>
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Contraseña</label>
+                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <label class="error-pass-msg-hidden">Contraseña introducida inválida</label>
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Repite tu contraseña</label>
+                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <label class="error-passrep-msg-hidden">Las contraseñas no coinciden</label>
+              </div>
+              <button class="btn register-btn">Crear cuenta</button>
+            </form>
+            <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+        </div>
+        <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
+          <path fill="#00cba9" fill-opacity="1"
+            d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+    </div>
+
   </header>
   <main>
     <section class="home">

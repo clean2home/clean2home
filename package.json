@@ -29,6 +29,9 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "@glidejs/glide": "^3.5.2"
+    "@glidejs/glide": "^3.5.2",
+    "firebase": "^9.6.11",
+    "sweetalert2": "^11.4.9",
+    "validator": "^13.7.0"
   }
 }
