@@ -13,6 +13,8 @@ export const startRegisterWithEmail = (name, email, password, rpPassword) => {
   // Validación campos
   if (validateFields(name, email, password, rpPassword)) {
     registerWithEmail(name, email, password);
+  } else {
+    console.log("Fallo");
   }
 };
 
@@ -20,7 +22,7 @@ const registerWithEmail = (name, email, password) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then(async({ user }) => {
       const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
-      updateProfile(user, { displayName: name, photoURL: profileImage });
+      await updateProfile(user, { displayName: name, photoURL: profileImage });
       setupUserUI(user);
       toggleModal(modalLoginRegister);
       Swal.fire({
@@ -116,20 +118,40 @@ export const validateFields = (name, email, password, passwordRepeat) => {
   if (name && !isAlpha(name)) {
     nameField.classList.add("error-name");
     nameErrorMessage.classList.add("error-name-msg");
-  } else if (email && !isEmail(email)) {
+  }
+  if (email && !isEmail(email)) {
     emailField.classList.add("error-email");
     emailErrorMessage.classList.add("error-email-msg");
-  } else if (password && !isStrongPassword(password, { minLength: 6, minSymbols: 0 })) {
+  }
+  if (password && !isStrongPassword(password, { minLength: 6, minSymbols: 0 })) {
     passField.classList.add("error-pass");
     passErrorMessage.classList.add("error-pass-msg");
-  } else if (passwordRepeat && password !== passwordRepeat) {
+  }
+  if (passwordRepeat && password !== passwordRepeat) {
     passRepField.classList.add("error-passrep");
     passRepErrorMessage.classList.add("error-passrep-msg");
-  } else if (name && email && password && passwordRepeat) {
-    return true;
+  }
+
+  if (name && isAlpha(name)) {
+    nameField.classList.remove("error-name");
+    nameErrorMessage.classList.remove("error-name-msg");
   }
   if (email && isEmail(email)) {
     emailField.classList.remove("error-email");
     emailErrorMessage.classList.remove("error-email-msg");
+  }
+  if (password && isStrongPassword(password, { minLength: 6, minSymbols: 0 })) {
+    passField.classList.remove("error-pass");
+    passErrorMessage.classList.remove("error-pass-msg");
+  }
+  if (passwordRepeat && password === passwordRepeat) {
+    passRepField.classList.remove("error-passrep");
+    passRepErrorMessage.classList.remove("error-passrep-msg");
+  }
+
+  if (isAlpha(name) && isEmail(email) && isStrongPassword(password, { minLength: 6, minSymbols: 0 }) && password === passwordRepeat) {
+    return true;
+  } else {
+    return false;
   }
 };
