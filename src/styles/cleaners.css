@@ -208,7 +208,7 @@ body {
   justify-content: center;
 }
 
-.cleaner-image>img {
+.cleaner-image > img {
   width: 130px;
   height: 130px;
 }
