@@ -120,6 +120,40 @@ body {
   align-items: center;
 }
 
+.home-about {
+  margin: auto;
+  width: 70%;
+}
+
+.values {
+  margin: auto;
+  width: 70%;
+}
+
+.values h2 {
+  text-align: center;
+  font-family: var(--ff-poppins);
+  margin: 5em 0 0.5em;
+  font-size: 2em;
+}
+
+.values-properties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.properties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 120px;
+  margin: 3em;
+  border-radius: 0.3em;
+  box-shadow: 5px 5px 5px rgb(198 198 198);
+  font-family: var(--ff-poppins);
+}
+
 .home-slogan {
   font-family: var(--ff-poppins);
   font-size: 4em;
@@ -178,6 +212,37 @@ body {
 /* -----------------------------------*\
   #INFO_CLIENTES
 \*----------------------------------- */
+.team-title {
+  text-align: center;
+  font-family: var(--ff-poppins);
+  margin: 4em 0 -0.5em;
+  font-size: 2em;
+}
+
+.team {
+  background-color: var(--color-primary);
+}
+
+.team-members {
+  margin: auto;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5em;
+  align-items: center;
+}
+
+.team-members div {
+  display: flex;
+  width: 200px;
+  height: 254px;
+  background-color: white;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0.3em;
+  box-shadow: 5px 5px 5px #00cba9;
+  font-family: var(--ff-open-sans);
+}
 
 .info-clients {
   background-color: var(--color-primary);
@@ -484,6 +549,19 @@ body {
   .home-slogan {
     font-size: 3em;
   }
+
+  .values-properties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -552,6 +630,19 @@ body {
     width: 25%;
     margin-bottom: 4em;
   }
+
+  .values-properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
 }
 
 @media (max-width: 500px) {
@@ -617,5 +708,19 @@ body {
     flex-direction: column;
     padding: 2em;
     gap: 1em;
+  }
+
+  .values-properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team-members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

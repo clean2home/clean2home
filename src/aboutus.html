@@ -33,10 +33,9 @@
     rel="stylesheet" />
 
   <!-- ICONS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-
-
+  <link defer rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
   <script type="module" src="./main.js"></script>
+
   <!-- META TAGS -->
   <meta name="description"
     content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
@@ -56,19 +55,16 @@
           <a href="#"><img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" /></a>
         </li>
         <li class="navbar-toggle">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fi fi-sr-menu-burger"></i>
         </li>
         <li class="navbar-links">
-          <a href="index.html">Inicio</a>
+          <a href="#">Inicio</a>
         </li>
         <li class="navbar-links">
           <a href="#">Servicios</a>
         </li>
         <li class="navbar-links">
-          <a href="aboutus.html">Sobre nosotros</a>
-        </li>
-        <li class="navbar-links">
-          <a href="como-funciona.html">Como funciona</a>
+          <a href="#">Sobre nosotros</a>
         </li>
         <li class="navbar-links">
           <a href="#">Hazte cleaner</a>
@@ -78,65 +74,43 @@
     </nav>
   </header>
   <main>
-    <section class="home">
+    <section class="home-about">
       <div>
         <h1 class="home-slogan">
-          Lleva el <strong>orden</strong> a tu hogar
+          Porque queremos <strong>hacer fácil la limpieza</strong> de tu hogar
         </h1>
-        <h2 class="home-description">Contrata Cleaners cerca de ti</h2>
+        <h2 class="home-description">Muchos porqués para elegirnos</h2>
         <p class="home-text">
-          En Clean2Home conectamos a gente que busca servicios de limpieza con profesionales locales de confianza.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <form class="home-form">
-          <input type="text" placeholder="Introduce C.P. o ciudad" />
-          <button class="btn home-btn">Buscar</button>
-        </form>
       </div>
-      <img src="./assets/home-illustration.svg" alt="" />
     </section>
+    <section class="values">
+      <h2>Nuestros valores</h2>
+      <div class="values-properties">
+        <div class="properties">Honestidad</div>
+        <div class="properties">Calidad del servicio</div>
+        <div class="properties">Puntualidad</div>
+      </div>
+    </section>
+    <h2 class="team-title">Nuestro equipo</h2>
     <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
       <path fill="#00cba9" fill-opacity="1"
         d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
       </path>
     </svg>
-    <!-- SECCIÓN INFO CLIENTES -->
-    <section class="info-clients">
-      <div class="container-client">
-        <article class="info-client-box">
-          <div class="icons-clients maps-icon">
-            <img src="./assets/info-map.svg" alt="Icono de ubicación" />
-          </div>
-          <h3 class="info-client-box-title">Cerca de ti</h3>
-          <p>
-            Introduciendo tu ubicación encontrarás a tiempo real los cleaners
-            disponibles en ese momento. También puedes concretar una cita en
-            el horario de cada cleaner.
-          </p>
-        </article>
-        <article class="info-client-box">
-          <div class="icons-clients money-icon">
-            <img src="./assets/info-money.svg" alt="Icono de una bolsa del dólar" />
-          </div>
-          <h3 class="info-client-box-title">Elige la mejor opción</h3>
-          <p>
-            Compara precios y valoraciones entre los cleaners y selecciona la
-            opción que mejor se ajuste a tus necesidades. Contrata solo las horas que necesites.
-          </p>
-        </article>
-        <article class="info-client-box">
-          <div class="icons-clients house-icon">
-            <img src="./assets/info-home.svg" alt="Icono de una casa con un corazón enmedio" />
-          </div>
-          <h3 class="info-client-box-title">Proceso seguro</h3>
-          <p>
-            En Clean2Home actuamos como intermediarios y nos aseguramos de el
-            que trabajo se realiza correctamente. ¡Olvídate de buscar a
-            ciegas!
-          </p>
-        </article>
-      </div>
-      <div class="button-container">
-        <a href="#" class="client-button">Más Información</a>
+    <section class="team">
+      <div class="team-members">
+        <div><h3>Abel</h3></div>
+        <div><h3>Alex</h3></div>
+        <div><h3>Álvaro</h3></div>
+        <div><h3>Daniela</h3></div>
+        <div><h3>Enrique</h3></div>
+        <div><h3>Iván</h3></div>
+        <div><h3>Lale</h3></div>
       </div>
     </section>
     <!-- SECCIÓN INFO CLIENTES -->
@@ -182,18 +156,18 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-1.jpg" alt="imagen2" />
+              <img class="gatos"
+                src="./assets/reviewers/review-1.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>Me parece un servicio súper recomendable. El trato del cleaner es inmejorable y lo mejor es que
-                  puedes contactar con cualquiera que haya disponible a tiempo real, por lo que si tienes una urgencia
-                  viene genial.</p>
+                <p>Me parece un servicio súper recomendable. El trato del cleaner es inmejorable y lo mejor es que puedes contactar con cualquiera que haya disponible a tiempo real, por lo que si tienes una urgencia viene genial.</p>
                 <footer>
                   <cite>María P.</cite>
                   <small>Madrid</small>
@@ -201,17 +175,18 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-3.jpg" alt="imagen2" />
+              <img class="gatos"
+                src="./assets/reviewers/review-3.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>Me ha salvado la vida ésta aplicación, muy buenos precios en general y sencilla de utilizar, eliges a
-                  tu cleaner, viene a casa y listo. Repetiré seguro.</p>
+                <p>Me ha salvado la vida ésta aplicación, muy buenos precios en general y sencilla de utilizar, eliges a tu cleaner, viene a casa y listo. Repetiré seguro.</p>
                 <footer>
                   <cite>Eduardo F.</cite>
                   <small>Barcelona</small>
@@ -219,18 +194,18 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-4.jpg" alt="reseña 1" />
+              <img class="gatos"
+                src="./assets/reviewers/review-4.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>No sabía muy bien a quién contratar para el servicio de limpieza doméstica, pero viendo las
-                  valoraciones de los cleaners es muy fácil decidirte por alguien responsable y de confianza. Un
-                  servicio y calidad de 10. </p>
+                <p>No sabía muy bien a quién contratar para el servicio de limpieza doméstica, pero viendo las valoraciones de los cleaners es muy fácil decidirte por alguien responsable y de confianza. Un servicio y calidad de 10. </p>
                 <footer>
                   <cite>Cristian M.</cite>
                   <small>Vigo</small>
@@ -238,13 +213,15 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-2.jpg" alt="reseña 2" />
+              <img class="gatos"
+                src="./assets/reviewers/review-2.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
                 <p>La volveré a usar. Ya la recomendé a amigos. </p>
@@ -255,17 +232,18 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-6.jpg" alt="reseña 3" />
+              <img class="gatos"
+                src="./assets/reviewers/review-6.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
-                <p>La verdad que es bastante útil para conseguir alguien que te eche una mano en casa cuando te mudas de
-                  ciudad y no conoces a nadie para recomendaciones. </p>
+                <p>La verdad que es bastante útil para conseguir alguien que te eche una mano en casa cuando te mudas de ciudad y no conoces a nadie para recomendaciones.  </p>
                 <footer>
                   <cite>Sara G.</cite>
                   <small>Valencia</small>
@@ -273,13 +251,15 @@
               </blockquote>
             </li>
             <li class="glide__slide slider-card">
-              <img class="gatos" src="./assets/reviewers/review-5.jpg" alt="reseña 4" />
+              <img class="gatos"
+                src="./assets/reviewers/review-5.jpg"
+                alt="imagen2" />
               <div class="slider-card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
               </div>
               <blockquote class="slider-card-text">
                 <p>Muy buenos servicios, rápido y fácil de usar.</p>
@@ -292,9 +272,9 @@
           </ul>
           <div class="glide__arrows" data-glide-el="controls">
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
-                class="fa-solid fa-chevron-left"></i></button>
+                class="fi fi-sr-angle-left"></i></button>
             <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
-                class="fa-solid fa-chevron-right"></i></button>
+                class="fi fi-sr-angle-right"></i></button>
           </div>
         </div>
       </div>
@@ -304,12 +284,12 @@
 
     <div class="container">
       <button class="btn btn-teal">
-        <p>Únete como usuario &nbsp; <i class="fa-solid fa-arrow-right"></i></p>
+        <p>Únete como usuario &nbsp; <i class="fi fi-sr-arrow-right"></i></p>
 
         <!-- 	&#8594; es la flecha-->
       </button>
       <button class="btn btn-teal">
-        <p>Únete como cleaner &nbsp; <i class="fa-solid fa-arrow-right"></i></p>
+        <p>Únete como cleaner &nbsp; <i class="fi fi-sr-arrow-right"></i></p>
       </button>
     </div>
   </main>
@@ -323,7 +303,7 @@
             <p>922 25 88 744</p>
           </li>
           <li>
-            <a href="mailto:clean2homeeoi@gmail.com" class="mailto">contacto@clean2home.es</a>
+            <a href="clean2home@home.com" class="mailto">Envíanos un correo</a>
           </li>
 
         </ul>
@@ -349,7 +329,7 @@
         <h3 class="column-title">Información</h3>
         <ul class="items">
           <li>
-            <a href="aboutus.html">Sobre nosotros</a>
+            <a href="#">Sobre nosotros</a>
           </li>
           <li>
             <a href="#">Trabaja con nosotros</a>
