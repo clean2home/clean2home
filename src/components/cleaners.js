@@ -14,7 +14,7 @@ function shortComment(element) { // Se le pasa un elemento directamente
 cleaners.forEach((cleaner) => {
   const cleanerCard = `<div class="cleaner-container">
   <div class="cleaner-image"> <!-- imagen -->
-    <img src="../assets/${cleaner.image}"  class="services-profile">
+    <img src="${cleaner.image}"  class="services-profile">
   </div>
   <div class="cleaner-info"><!-- info -->
     <div class="container-name-rating">
