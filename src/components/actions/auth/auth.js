@@ -1,5 +1,5 @@
 import Swal from "sweetalert2/dist/sweetalert2.all.js";
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "../../firebase/config";
 import { isEmail, isStrongPassword } from "validator";
 import isAlpha from "validator/lib/isAlpha";
@@ -14,7 +14,12 @@ export const startRegisterWithEmail = (name, email, password, rpPassword) => {
   if (validateFields(name, email, password, rpPassword)) {
     registerWithEmail(name, email, password);
   } else {
-    console.log("Fallo");
+    Swal.fire({
+      title: "Error",
+      text: "Hay algún campo incorrecto",
+      icon: "error",
+      confirmButtonColor: "#00cba9"
+    });
   }
 };
 
@@ -32,10 +37,10 @@ const registerWithEmail = (name, email, password) => {
       });
     })
     .catch((error) => {
-      const errorMessage = error.message;
+      console.warn(error);
       Swal.fire({
         title: "Error",
-        text: errorMessage,
+        text: "Error en el registro",
         icon: "error",
         confirmButtonColor: "#00cba9"
       });
@@ -64,10 +69,10 @@ const loginWithEmail = (email, password) => {
       });
     })
     .catch((error) => {
-      const errorMessage = error.message;
+      console.warn(error);
       Swal.fire({
         title: "Oops...",
-        text: errorMessage,
+        text: "Las credenciales no son correctas",
         icon: "error",
         confirmButtonColor: "#00cba9"
       });
@@ -96,10 +101,10 @@ export const startLoginWithGoogle = () => {
       });
     }).catch((error) => {
       // Handle Errors here.
-      const errorMessage = error.message;
+      console.warn(error);
       Swal.fire({
         title: "Error",
-        text: errorMessage,
+        text: "Error en el registro",
         icon: "error",
         confirmButtonColor: "#00cba9"
       });
@@ -154,4 +159,19 @@ export const validateFields = (name, email, password, passwordRepeat) => {
   } else {
     return false;
   }
+};
+
+export const startSignout = () => {
+  signOut(auth).then(() => {
+    Swal.fire({
+      icon: "success",
+      title: "¡Hasta pronto!",
+      timer: 1000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      allowOutsideClick: false
+    });
+  }).catch((error) => {
+    console.log(error);
+  });
 };

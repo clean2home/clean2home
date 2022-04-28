@@ -4,7 +4,7 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
-import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, validateFields } from "./components/actions/auth/auth";
+import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, startSignout, validateFields } from "./components/actions/auth/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./components/firebase/config";
 import { setupUI, setupUserUI } from "./components/actions/ui/navbar";
@@ -56,6 +56,7 @@ const modalLoginRegister = document.querySelector("#login-register-modal");
 const modalClose = document.querySelector("#close-modal");
 const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-register");
 const googleLoginButton = document.querySelector(".google-btn");
+const navbarImg = document.querySelector("#navbar-img");
 
 loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
 modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
@@ -91,3 +92,5 @@ registerForm.addEventListener("blur", function(event) {
 }, true);
 
 googleLoginButton.addEventListener("click", () => startLoginWithGoogle());
+
+navbarImg.addEventListener("click", () => startSignout());
