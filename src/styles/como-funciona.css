@@ -1,0 +1,140 @@
+.be-cleaner {
+  font-family: var(--ff-poppins);
+  margin: auto;
+  margin-top: 20px;
+  max-width: 75%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.be-cleaner h2 {
+  margin-bottom: 1em;
+}
+
+.cleaner-grid {
+  margin: 2em 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.cleaner-grid-card {
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px #00000030;
+}
+
+.cleaner-grid-card h3 {
+  color: #00cba9;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 0.8em;
+}
+
+.cleaner-seguro {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.cleaner-seguro p {
+  flex: 2;
+  max-width: 800px;
+}
+
+.cleaner-seguro img {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.cleaner-seguro-container {
+  margin: 3em 0 6em;
+}
+
+.slogan {
+  margin: 20px auto 10px;
+  max-width: 75%;
+  display: flex;
+}
+
+.funciona-slogan {
+  font-family: var(--ff-poppins);
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1;
+  margin: 25px 0;
+}
+
+.funciona-slogan strong {
+  color: #00cba9;
+}
+
+.steps-client {
+  padding-bottom: 80px;
+}
+
+.container-steps {
+  width: 75%;
+  height: 60em;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.steps-left {
+  width: 50%;
+  height: 180px;
+  margin-left: 1px;
+  padding-right: 20px;
+  border-right: 1px solid #dbdbdb;
+  text-align: right;
+}
+
+.icon {
+  border: 0;
+  background-color: white;
+  box-shadow: 1px 5px 5px #00000030;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 1em;
+}
+
+.icon img {
+  width: 35px;
+  height: 35px;
+  margin-left: 20%;
+}
+
+.step-right {
+  width: 50%;
+  height: 180px;
+  margin-left: 50%;
+  padding-left: 20px;
+  border-left: 1px solid #dbdbdb;
+  text-align: left;
+}
+
+.text-green {
+  color: #00cba9;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-register {
+  color: black;
+  font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+  .cleaner-grid { grid-template-columns: repeat(2, 1fr); }
+  .cleaner-seguro { flex-direction: row; }
+  .steps-left { padding-left: 25%; }
+  .step-right { padding-right: 25%; }
+  .steps-client { padding-bottom: 0; }
+}

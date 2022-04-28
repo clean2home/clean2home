@@ -1,13 +1,12 @@
 // Import CSS
 import "./styles/main.css";
-import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
 import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, startSignout, validateFields } from "./components/actions/auth/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./components/firebase/config";
 import { setupUI, setupUserUI } from "./components/actions/ui/navbar";
+import { startCarousel } from "./components/actions/ui/carousel";
 
 // Get user
 onAuthStateChanged(auth, (user) => {
@@ -20,27 +19,12 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // Carousel
-new Glide(".glide", {
-  type: "carousel",
-  focusAt: "center",
-  perView: 4,
-  gap: 70,
-  autoplay: 7000,
-  keyboard: true,
-  breakpoints: {
-    1400: {
-      perView: 3
-    },
-    1024: {
-      perView: 2,
-      gap: 70
-    },
-    600: {
-      perView: 1
-    }
-  }
-}).mount();
+const carouselContainer = document.querySelector(".glide");
+if (carouselContainer) {
+  startCarousel();
+}
 
+// NAVBAR
 const toggleButton = document.querySelector(".navbar-toggle");
 const navbarLinks = document.querySelectorAll(".navbar-links");
 function navbarRes() {
