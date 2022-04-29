@@ -1,6 +1,7 @@
 import profilePonytail from "../assets/profile-ponytail.svg";
 import profileGuyglasses from "../assets/profile-guy-glasses.svg";
 import profilePic from "../assets/profile_pic.svg";
+import star from "../assets/star.svg";
 
 const cleaners = [
   { name: "Mery Jane", description: "Hola soy Mery, ¡encantada de conocerte! Llevo más de 10 años dedicándome al servicio doméstico, también puedo cocinar en las horas de trabajo. Tengo buena mano y buen gusto a la hora de ordenar y dedicación por completo.", image: `${profilePonytail}`, worksCount: 185, rating: 3, price: "12,00€" },
@@ -26,7 +27,7 @@ cleaners.forEach((cleaner) => {
     <div class="container-name-rating">
       <h3 class="name-cleaner">${cleaner.name}</h3>
     <div class="rating-star">
-      <img class="star-icon" src="../assets/star.svg" alt="">
+      <img class="star-icon" src="${star}" alt="">
       <p class="rating">${cleaner.rating}</p>
     </div>
     </div>
