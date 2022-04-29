@@ -13,8 +13,11 @@ module.exports = {
     assetsDir: "./",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "/src/index.html"),
-        nested: resolve(__dirname, "/src/cleaners/index.html"),
+        main: resolve(__dirname, "src/index.html"),
+        cleaners: resolve(__dirname, "src/cleaners.html"),
+        about: resolve(__dirname, "src/about-us.html"),
+        comofunciona: resolve(__dirname, "src/como-funciona.html"),
+        underconstruction: resolve(__dirname, "src/under-construction.html"),
       }
     }
   }

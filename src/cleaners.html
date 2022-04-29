@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="./styles/como-funciona.css">
+  <link rel="stylesheet" href="./styles/cleaners.css">
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -36,6 +36,7 @@
   <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
 
   <script type="module" src="./main.js"></script>
+  <script type="module" src="./components/cleaners.js"></script>
   <!-- META TAGS -->
   <meta name="description"
     content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
@@ -44,7 +45,7 @@
   <meta http-equiv="cache-control" content="no-cache" />
   <link rel="canonical" href="https://clean2home.es/" />
 
-  <title>Clean2Home | Como funciona</title>
+  <title>Clean2Home | Servicios</title>
 </head>
 
 <body>
@@ -149,109 +150,23 @@
     </div>
 
   </header>
-  <main class="como-funciona">
-    <section class="funciona">
-      <div class="slogan">
-        <h1 class="funciona-slogan">
-          Descubre cómo <strong>funciona</strong>
-        </h1>
+  <main>
+    <div class="detail-cleaners">
+      <div class="header-cleaners">
+        <div class="container-h1">
+        <h1 class="cleaners-slogan">Encuentra a la persona ideal para <strong>mimar tu hogar</strong></h1>
       </div>
-    </section>
-    <section class="steps-client">
-      <h2 class="be-cleaner">Si buscas un cleaner</h2>
-      <div class="container-steps">
-        <div class="steps-left">
-          <button class="icon">
-            <i class="fa-solid fa-right-to-bracket"></i>
-          </button>
-          <h4 class="text-green">Regístrate</h4>
-          <p class="explain-left">
-            <a href="#" class="btn-register">Date de alta</a>, introduce tus datos, configura tu cuenta y comienza a
-            buscar tu cleaner
-          </p>
-        </div>
-        <div class="step-right">
-          <button class="icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <h4 class="text-green">Busca en tu ciudad</h4>
-          <p class="explain-right">
-            Introduce tu Código Postal y conoce a los cleaners más cercanos a ti
-          </p>
-        </div>
-        <div class="steps-left">
-          <button class="icon">
-            <i class="fa-solid fa-check"></i>
-          </button>
-          <h4 class="text-green">Selecciona a tu cleaner</h4>
-          <p class="explain-left">
-            Elige el profesional que mejor se adapte a tus necesidades
-          </p>
-        </div>
-        <div class="step-right">
-          <button class="icon">
-            <i class="fa-solid fa-calendar-check"></i>
-          </button>
-          <h4 class="text-green">Contrata el servicio</h4>
-          <p class="explain-right">
-            Elige la hora y día que quieres que te visite tu cleaner
-          </p>
-        </div>
-        <div class="steps-left">
-          <button class="icon">
-            <i class="fa-solid fa-flag-checkered"></i>
-          </button>
-          <h4 class="text-green">Disfruta y paga el servicio</h4>
-          <p class="explain-left">
-            Una vez disfrutas del servicio, paga mediante las facilidades que te da nuestra web y valora al cleaner
-          </p>
-        </div>
+        <form class="cleaners-form">
+          <input type="text" placeholder="Introduce C.P o ciudad">
+          <button class="btn search">buscar</button>
+        </form>
       </div>
-    </section>
-
-    <section class="be-cleaner">
-      <h2>Si quieres ser cleaner</h2>
-      <p>En Clean2Home te ponemos en contanto con clientes deseosos de contratar tus servicios. Tu pones el precio y
-        el horario. ¡Unete!
-      </p>
-      <div class="cleaner-grid">
-        <div class="cleaner-grid-card">
-          <h3>1. Resgístrate como cleaner en Clean2Home</h3>
-          <p>Añade información sobre ti e imágenes que muestren tu personalidad y profesionalidad</p>
-        </div>
-        <div class="cleaner-grid-card">
-          <h3>2. Indica tu disponibilidad</h3>
-          <p>Puedes organizarte como mejor te venga, sin horarios y sin horas mínimas que trabajar a la semana</p>
-        </div>
-        <div class="cleaner-grid-card">
-          <h3>3. Atento a los mensajes</h3>
-          <p>Te avisaremos por mensaje cuando un cliente necesite tu servicio. Confirma la cita y prepara todo lo
-            necesario</p>
-        </div>
-        <div class="cleaner-grid-card">
-          <h3>4. Gana dinero</h3>
-          <p>Cumple con el servicio y recibe el dinero antes de salir por la puerta del cliente. Pide una buena
-            reseña, ¡todo suma para conseguir tu próximo cliente!</p>
-        </div>
-      </div>
-      <div class="cleaner-seguro-container">
-        <h2>Asociados con Caser Seguros</h2>
-        <div class="cleaner-seguro">
-          <p>Porque todos sabemos lo que le pasó a la abuelita de Caperucita Roja, nosotros estamos asegurados con
-            <strong>Caser Seguros</strong>. <br>
-            Cualquier incidente que sufra cualquiera de las partes estará cubierto con nuestro seguro.<br>
-            Porque queremos que solo te preoucpes de disfrutar de tu hogar impecable.
-          </p>
-          <img src="./assets/caser-seguros.png" alt="caser seguros">
-        </div>
-      </div>
-
-    </section>
-
-
-
-
-
+          <div class="container-cards" ><!-- contenedor -->
+          </div>
+      <div class="btn-container">
+        <a href="under-construction.html" class="btn cleaners-more">Ver más</a>
+      </div> 
+    </div>
   </main>
   <!--FOOTER -->
   <footer class="footer">
