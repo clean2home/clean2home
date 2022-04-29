@@ -179,6 +179,7 @@ label {
 .values-properties {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
 .properties {
@@ -254,7 +255,7 @@ label {
 .team-title {
   text-align: center;
   font-family: var(--ff-poppins);
-  margin: 4em 0 -0.5em;
+  margin: 4em 0 1em;
   font-size: 2em;
 }
 
@@ -399,6 +400,8 @@ label {
 }
 
 .work-with-us > p {
+  width: 45%;
+  min-width: 330px;
   margin: 35px 12%;
 }
 
