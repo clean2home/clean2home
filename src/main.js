@@ -35,6 +35,7 @@ function navbarRes() {
 toggleButton.addEventListener("click", navbarRes);
 
 // Modal
+const joinAsUser = document.querySelector(".join-as-user");
 const loginButton = document.querySelector("#login-register");
 const modalLoginRegister = document.querySelector("#login-register-modal");
 const modalClose = document.querySelector("#close-modal");
@@ -42,6 +43,9 @@ const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-regis
 const googleLoginButton = document.querySelector(".google-btn");
 const navbarImg = document.querySelector("#navbar-img");
 
+if (joinAsUser) {
+  joinAsUser.addEventListener("click", () => toggleModal(modalLoginRegister));
+}
 loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
 modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
 toggleLoginRegisterButton.forEach(button => button.addEventListener("click", toggleLoginRegisterForm));

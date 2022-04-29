@@ -56,6 +56,7 @@ export const startLoginWithEmail = (email, password) => {
 const loginWithEmail = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(async({ user }) => {
+      toggleModal(modalLoginRegister);
       Swal.fire({
         icon: "success",
         title: "Inicio de sesión correcto",
@@ -65,7 +66,6 @@ const loginWithEmail = (email, password) => {
         allowOutsideClick: false
       }).then((result) => {
         setupUserUI(user);
-        toggleModal(modalLoginRegister);
       });
     })
     .catch((error) => {
@@ -89,6 +89,7 @@ export const startLoginWithGoogle = () => {
         await updateProfile(user, { photoURL: profileImage });
       }
       setupUserUI(user);
+      toggleModal(modalLoginRegister);
       Swal.fire({
         icon: "success",
         title: "Inicio de sesión correcto",
@@ -97,7 +98,6 @@ export const startLoginWithGoogle = () => {
         showConfirmButton: false,
         allowOutsideClick: false
       }).then((result) => {
-        toggleModal(modalLoginRegister);
       });
     }).catch((error) => {
       // Handle Errors here.

@@ -1,0 +1,119 @@
+:root {
+  /* COLORS */
+  --color-primary: #00cba9;
+  --color-primary-dark: #00a88c;
+  --color-secondary: #3462ac;
+  --color-secondary-dark: #26477e;
+  --color-secondary-very-dark: #172b4b;
+  --color-dark-gray: #313230;
+  --color-light-yellow: #ffd97d;
+
+  /* FONTS */
+  --ff-open-sans: "Open Sans", helvetica, arial, sans-serif;
+  --ff-poppins: "Poppins", "Open Sans", helvetica, arial, sans-serif;
+}
+
+/* -----------------------------------*\
+  #RESET
+\*----------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--ff-open-sans);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  font-family: var(--ff-poppins);
+  border-radius: 1em;
+}
+
+/* -----------------------------------*\
+  #ILUSTRACIÓN Y TÍTULO
+\*----------------------------------- */
+.main-construction {
+  width: 90%;
+  margin: 3em auto;
+}
+
+.container-construction {
+  margin: 0 auto;
+  width: 70%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-construction {
+  width: 750px;
+  font-family: var(--ff-poppins);
+  color: var(--color-dark-gray);
+  font-size: 4em;
+}
+
+.title-construction > strong {
+  color: var(--color-primary);
+}
+
+.img-construction {
+  width: 90%;
+  width: 500px;
+  min-width: 250px;
+}
+
+.button-back {
+  text-align: center;
+  margin: 0.5em;
+  color: var(--color-dark-gray);
+  background-color: var(--color-light-yellow);
+  box-shadow: 0 6px 0 #c18c32;
+}
+
+.button-back:hover {
+  background-color: #e3c275;
+}
+
+.button-back:active {
+  box-shadow: 0 3px 0 #c18c32;
+  position: relative;
+  top: 5px;
+}
+
+@media (max-width: 760px) {
+  .title-construction {
+    width: 330px;
+    font-family: var(--ff-poppins);
+    color: var(--color-dark-gray);
+    font-size: 2.8em;
+  }
+
+  .img-construction {
+    width: 90%;
+    min-width: 330px;
+  }
+
+  .button-back {
+    font-size: 1em;
+  }
+}

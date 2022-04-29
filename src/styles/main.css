@@ -271,13 +271,16 @@ label {
   align-items: center;
 }
 
-.team-members div {
+.team-members .member {
   display: flex;
+  padding: 1em;
   width: 200px;
-  height: 254px;
+  height: 250px;
+  justify-items: center;
+  flex-direction: column;
   background-color: white;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   border-radius: 0.3em;
   box-shadow: 5px 5px 5px #00cba9;
   font-family: var(--ff-open-sans);
@@ -808,10 +811,18 @@ label {
     margin-bottom: 4em;
   }
 
+  .modal {
+    margin: 0;
+  }
+
   .modal-box {
     width: 80%;
   }
-  
+
+  .modal-content {
+    padding: 3em 4em;
+  }
+
   .values-properties {
     display: flex;
     flex-direction: column;
@@ -894,7 +905,11 @@ label {
   .modal-box {
     width: 95%;
   }
-  
+
+  .modal-content {
+    padding: 1em 2em;
+  }
+
   .values-properties {
     display: flex;
     flex-direction: column;
