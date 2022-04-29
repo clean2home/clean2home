@@ -1,5 +1,6 @@
 // Import CSS
 import "./styles/main.css";
+import "https://kit.fontawesome.com/790908a15c.js";
 
 import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
 import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, startSignout, validateFields } from "./components/actions/auth/auth";
