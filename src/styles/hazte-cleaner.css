@@ -1,0 +1,84 @@
+.hazte-cleaner {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hazte-cleaner-text {
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+
+.hazte-cleaner-form-container {
+  width: 80%;
+  margin: 2em auto;
+
+  & h3 {
+    font-family: var(--ff-poppins);
+    font-size: 2em;
+    margin-bottom: 0.7em;
+  }
+
+  & label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+}
+
+.form-group.image {
+  border: 2px solid rgb(31 31 31);
+  border-radius: 20px;
+  padding: 0.3em 1em;
+  margin: 0.5em 0 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group.image input {
+  display: none;
+}
+
+.btn-upload {
+  background: #e4e4e4;
+  color: rgb(29 29 29);
+
+  &:hover {
+    background: #9c9c9c;
+    color: rgb(29 29 29);
+  }
+}
+
+.preview img {
+  width: 100px;
+  height: auto;
+}
+
+.btn-submit {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* -----------------------------------*\
+  #MEDIA QUERIES
+\*----------------------------------- */
+
+@media (max-width: 1024px) {
+  .hazte-cleaner {
+    width: 80%;
+  }
+
+  .hazte-cleaner-form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hazte-cleaner {
+    width: 90%;
+  }
+}

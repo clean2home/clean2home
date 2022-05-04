@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="./styles/cleaners.css">
+  <link rel="stylesheet" href="./styles/hazte-cleaner.css">
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -36,7 +36,7 @@
   <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
 
   <script type="module" src="./main.js"></script>
-  <script type="module" src="./components/cleaners.js"></script>
+  <script type="module" src="./components/hazteCleaner.js"></script>
   <!-- META TAGS -->
   <meta name="description"
     content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
@@ -45,7 +45,7 @@
   <meta http-equiv="cache-control" content="no-cache" />
   <link rel="canonical" href="https://clean2home.es/" />
 
-  <title>Clean2Home | Servicios</title>
+  <title>Clean2Home | Hazte Cleaner</title>
 </head>
 
 <body>
@@ -150,24 +150,47 @@
     </div>
 
   </header>
-  <main>
-    <div class="detail-cleaners">
-      <div class="header-cleaners">
-        <div class="container-h1">
-        <h1 class="cleaners-slogan">Encuentra a la persona ideal para <strong>mimar tu hogar</strong></h1>
-      </div>
-        <form class="cleaners-form">
-          <input type="text" placeholder="Introduce C.P o ciudad">
-          <a href="under-construction.html" class="btn search">buscar</a>
-        </form>
-      </div>
-          <div class="container-cards" ><!-- contenedor -->
+ <main class="hazte-cleaner">
+   <h1 class="home-slogan">Tu nuevo futuro profesional esta a punto de <strong>comenzar</strong></h1>
+   <p class="hazte-cleaner-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quisquam vitae porro soluta aperiam nemo voluptatum, incidunt esse totam omnis vel vero aliquam illum enim quis eaque molestias quasi similique!
+   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius possimus quam, iste cupiditate aspernatur non asperiores velit quos similique animi neque quas nobis iusto, vero quod, expedita quidem ea maiores.
+   </p>
+   <p>Puedes ver más información en el apartado <a href="/como-funciona.html">cómo funciona</a></p>
+   <div class="hazte-cleaner-form-container">
+     <h3>Tus datos</h3>
+      <form action="POST" class="hazte-cleaner-form">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="&#xf007; Fernando López" />
+        </div>
+        <div class="form-group">
+          <label for="cp">Código postal</label>
+          <input type="number" class="form-control" name="cp" id="cp" placeholder="&#xf015; 47001">
+          <label for="city">Ciudad</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="&#xf64f; Valladolid">
+        </div>
+        <div class="form-group">
+          <label for="description">Una pequeña descripción sobre ti</label>
+          <textarea name="description" id="description" rows="5" draggable="false"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">¿Cúal es tu precio/hora?</label>
+          <input type="number" class="form-control" name="price" id="price" placeholder="&#xf153; 15">
+        </div>
+        <p class="hazte-cleaner-text">¡Ahora sube una imagen que te favorezca! Recuerda que debe de ser una imagen profesional</p>
+        <div class="form-group image">
+          <div>
+            <label class="btn btn-upload" for="image">Subir imagen</label>
+            <input type="file" id="image" accept="image/*">
           </div>
-      <div class="btn-container">
-        <a href="under-construction.html" class="btn cleaners-more">Ver más</a>
-      </div> 
-    </div>
-  </main>
+          <div class="preview">
+            <img id="image-preview">
+          </div>
+        </div>
+        <button class="btn btn-submit" type="submit">Enviar solicitud</button>
+      </form>
+   </div>
+ </main>
   <!--FOOTER -->
   <footer class="footer">
     <ul class="footer-nav">

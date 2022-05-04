@@ -1,6 +1,8 @@
 import Swal from "sweetalert2/dist/sweetalert2.all.js";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { auth } from "../../firebase/config";
+import { setDoc, doc, getDoc } from "firebase/firestore";
+import { auth, db } from "../../firebase/config";
+
 import { isEmail, isStrongPassword } from "validator";
 import isAlpha from "validator/lib/isAlpha";
 import { toggleModal } from "../ui/modal";
@@ -27,6 +29,8 @@ const registerWithEmail = (name, email, password) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then(async({ user }) => {
       const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
+
+      await setDoc(doc(db, "users", user.uid), { cleaner: false });
       await updateProfile(user, { displayName: name, photoURL: profileImage });
       setupUserUI(user);
       toggleModal(modalLoginRegister);
@@ -83,6 +87,11 @@ export const startLoginWithGoogle = () => {
   signInWithPopup(auth, provider)
     .then(async({ user }) => {
       const name = user.displayName.split(" ")[0];
+
+      const userDb = await getDoc(doc(db, "users", user.uid));
+      if (!userDb.exists()) {
+        await setDoc(doc(db, "users", user.uid), { cleaner: false });
+      }
       updateProfile(user, { displayName: name });
       if (!user.photoURL) {
         const profileImage = `https://api.multiavatar.com/${user.uid}.png`;
