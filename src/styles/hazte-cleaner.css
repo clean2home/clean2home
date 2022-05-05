@@ -25,6 +25,14 @@
   }
 }
 
+.user-logged {
+  display: none;
+}
+
+.user-unlogged {
+  height: 50vh;
+}
+
 .form-group.image {
   border: 2px solid rgb(31 31 31);
   border-radius: 20px;

@@ -1,4 +1,19 @@
+import { onAuthStateChanged } from "firebase/auth";
 import { startCreateCleaner } from "./actions/cleaners/cleaners";
+import { auth } from "./firebase/config";
+
+const userLogged = document.querySelector(".user-logged");
+const userUnlogged = document.querySelector(".user-unlogged");
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    userLogged.style.display = "block";
+    userUnlogged.style.display = "none";
+  } else {
+    userLogged.style.display = "none";
+    userUnlogged.style.display = "block";
+  }
+});
 
 const imageInput = document.querySelector("#image");
 const cleanerForm = document.querySelector(".hazte-cleaner-form");
