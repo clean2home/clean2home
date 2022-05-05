@@ -1,0 +1,314 @@
+/* -----------------------------------*\
+  #CUSTOM PROPERTY
+\*----------------------------------- */
+
+:root {
+  /* COLORS */
+  --color-primary: #00cba9;
+  --color-primary-dark: #00a88c;
+  --color-secondary: #3462ac;
+  --color-secondary-dark: #26477e;
+  --color-secondary-very-dark: #172b4b;
+  --color-dark-gray: #313230;
+  --color-light-yellow: #ffd97d;
+
+  /* FONTS */
+  --ff-open-sans: "Open Sans", helvetica, arial, sans-serif;
+  --ff-poppins: "Poppins", "Open Sans", helvetica, arial, sans-serif;
+}
+
+/* -----------------------------------*\
+    #RESET
+  \*----------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  font-family: var(--ff-poppins);
+  border-radius: 1em;
+}
+
+/* -----------------------------------*\
+  #CLEANERS-PROFILE CARD
+\*----------------------------------- */
+
+.cleaner-profile {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.cleaner-profile-container {
+  width: 100%;
+  display: flex;
+  height: auto;
+}
+
+/* -----------------------------------*\
+  #CLEANERS CARDS
+\*----------------------------------- */
+.container-card {
+  position: relative;
+  top: 320px;
+  right: 80px;
+  z-index: 1;
+}
+
+.container-cards {
+  top: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.cleaner-container {
+  font-family: var(--ff-open-sans);
+  color: #313230;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+  min-width: 560px;
+  box-shadow: 3px 5px 9px 2px #0000003e;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.cleaner-image {
+  width: 450px;
+  position: relative;
+  left: 130px;
+  top: 50px;
+}
+
+.cleaner-image > img {
+  width: 400px;
+  height: 400px;
+}
+
+.nombre-cleaner {
+  min-width: 100px;
+}
+
+.cleaner-info {
+  width: 90%;
+}
+
+.cleaner-info-p {
+  width: 90%;
+  padding: 10px;
+  font-size: 0.9em;
+  min-height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.btn .cleaners-more {
+  display: inline-block;
+}
+
+.container-name-rating {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-star {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.star-icon {
+  width: 15px;
+  margin: 5px;
+}
+
+.rating {
+  text-align: center;
+  margin: 1px;
+}
+
+.price {
+  text-align: center;
+  color: #00cba9;
+}
+
+.works {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.cleaner-btn {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.hire {
+  background: #ececec;
+  color: #313230;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.hire:hover {
+  background-color: #d6d6d6;
+}
+
+/* -----------------------------------*\
+  #MEDIA QUERIES
+\*----------------------------------- */
+
+@media (max-width: 1024px) {
+  .navbar-list {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 0.5em;
+
+    & a::after {
+      margin-top: 0.5em;
+    }
+
+    & a:hover::after {
+      width: 30%;
+    }
+  }
+
+  .active {
+    display: block;
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 3em;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .header-cleaners {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cleaners-slogan {
+    padding: 10px;
+    width: 100%;
+    min-width: 350px;
+    font-size: 2.8em;
+  }
+
+  .cleaners-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 350px;
+    font-size: 0.8em;
+  }
+
+  .container-cards {
+    width: 92%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .cleaner-container {
+    width: 95%;
+    max-width: 550px;
+    min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price {
+    margin-bottom: 15px;
+  }
+
+  .container-name-rating {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cleaner-btn {
+    margin-bottom: 5px;
+  }
+
+  .cleaner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .works {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .cleaner-info-p {
+    width: 95%;
+    text-align: center;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-list {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 2em;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+  }
+
+  .search {
+    max-width: 150px;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.1em;
+    align-self: flex-start;
+  }
+}
