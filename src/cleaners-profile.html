@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link defer href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/cleaners-profile.css">
 
+     <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/cleaners-profile.css">
     <title>Cleaners-profile</title>
 </head>
 <body>
@@ -34,11 +36,23 @@
                     </div>  
                     <div class="cleaner-btn"><!-- precio/boton -->
                       <p class="price">desde <strong>15,00</strong></p>
-                      <a href="/under-construction.html" class="btn hire">Contratar</a>
+                      <a href="#modal-click" class="btn hire">Contactar</a>
                     </div>
+                    
+                  <!-- Fin Modal-->
                 </div>
             </div>
         </div>
+        <!--Modal-->
+    <div id="modal-click" class="modal-box">
+      <div class="modal-content">
+          <h2 class="modal-header">CONTACTO</h2>
+          <hr>
+          <p class="modal-data modal-phone"><i class="fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=34656976735">656976735</a></p>
+          <p class="modal-data modal-email"><i class="fa-solid fa-envelope"></i><a href="mailto:lourdes-clean@gmail.com">lourdes-clean@gmail.com</a></p>
+          <a href="#" class="modal-close">&times;</a>
+      </div>
+  </div>
     </section>
     <script src="cleaners.js"></script>
 </body>
