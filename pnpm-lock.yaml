@@ -18,12 +18,14 @@ specifiers:
   postcss-syntax: ^0.36.2
   stylelint: ^14.6.1
   stylelint-config-standard: ^25.0.0
+  sweetalert2: ^11.4.9
   validator: ^13.7.0
   vite: ^2.8.6
 
 dependencies:
   '@glidejs/glide': 3.5.2
   firebase: 9.6.11
+  sweetalert2: 11.4.10
   validator: 13.7.0
 
 devDependencies:
@@ -3241,6 +3243,10 @@ packages:
   /svg-tags/1.0.0:
     resolution: {integrity: sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=}
     dev: true
+
+  /sweetalert2/11.4.10:
+    resolution: {integrity: sha512-Ms3mryLA/c5+llHNY0I9KXU8bv0N1a874gZr7xMPOiSnLD9veHZA92nZvJOkuN1hrdcR8kyj4IN8tBxlAIjVww==}
+    dev: false
 
   /table/6.8.0:
     resolution: {integrity: sha512-s/fitrbVeEyHKFa7mFdkuQMWlH1Wgw/yEXMt5xACT4ZpzWFluehAxRtUUQKPuWhaLAWhFcVx6w3oC8VKaUfPGA==}
