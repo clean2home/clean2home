@@ -1,8 +1,8 @@
 // Import CSS
 import "./styles/main.css";
 
-import { toggleLoginRegisterForm, toggleModal } from "./components/actions/ui/modal";
-import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, startSignout, validateFields } from "./components/actions/auth/auth";
+import { toggleLoginRegisterForm, toggleModal, toggleResetPasswordForm } from "./components/actions/ui/modal";
+import { startLoginWithEmail, startLoginWithGoogle, startRegisterWithEmail, startSignout, validateFields, resetPassword } from "./components/actions/auth/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./components/firebase/config";
 import { setupUI, setupUserUI } from "./components/actions/ui/navbar";
@@ -42,6 +42,7 @@ const modalClose = document.querySelector("#close-modal");
 const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-register");
 const googleLoginButton = document.querySelector(".google-btn");
 const navbarImg = document.querySelector("#navbar-img");
+const toggleResetPasswordButton = document.querySelector(".toggle-reset-password");
 
 if (joinAsUser) {
   joinAsUser.addEventListener("click", () => toggleModal(modalLoginRegister));
@@ -49,9 +50,11 @@ if (joinAsUser) {
 loginButton.addEventListener("click", () => toggleModal(modalLoginRegister));
 modalClose.addEventListener("click", () => toggleModal(modalLoginRegister));
 toggleLoginRegisterButton.forEach(button => button.addEventListener("click", toggleLoginRegisterForm));
+toggleResetPasswordButton.addEventListener("click", toggleResetPasswordForm);
 
 const loginForm = document.querySelector("#login-form");
 const registerForm = document.querySelector("#register-form");
+const resetPassForm = document.querySelector("#reset-password-form");
 
 registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -69,6 +72,13 @@ loginForm.addEventListener("submit", (e) => {
   const password = loginForm.passwordLogin.value;
 
   startLoginWithEmail(email, password);
+});
+
+resetPassForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = resetPassForm.emailReset.value;
+
+  resetPassword(email);
 });
 
 registerForm.addEventListener("blur", function(event) {
