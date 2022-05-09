@@ -1,45 +1,44 @@
-import profilePonytail from "../assets/profile-ponytail.svg";
-import profileGuyglasses from "../assets/profile-guy-glasses.svg";
-import profilePic from "../assets/profile_pic.svg";
-import star from "../assets/star.svg";
+import { getFirestore, getDocs, collection } from "firebase/firestore/lite";
+import { app } from "./firebase/config";
 
-const cleaners = [
-  { name: "Mery Jane", description: "Hola soy Mery, ¡encantada de conocerte! Llevo más de 10 años dedicándome al servicio doméstico, también puedo cocinar en las horas de trabajo. Tengo buena mano y buen gusto a la hora de ordenar y dedicación por completo.", image: `${profilePonytail}`, worksCount: 185, rating: 3, price: "12,00€" },
-  { name: "Pedro Pascal", description: "Chico muy serio en su trabajo, con más de 8 años de experiencia laboral demostrada. Trato todo tipo de superficies con delicadezza y cuido hasta el más mínimo detalle. Tengo disponibilidad horaria total.", image: `${profileGuyglasses}`, worksCount: 519, rating: 5, price: "16,00€" },
-  { name: "Maria Fernandez", description: "Me llamo María y llevo toda la vida trabajando como limpiadora. Estaré encantada de cuidar tu hogar como se merece.", image: `${profilePic}`, worksCount: 1589, rating: 4, price: "20,00€" },
-  { name: "Natalia Amorós", description: "Limpiadora con más de 5 años de experiencia, disponibilidad total de horario, festivos incluídos. Soy rápida a la par que eficaz en mi trabajo. ¡No dudes en llamarme!", image: `${profilePonytail}`, worksCount: 105, rating: 5, price: "15,00€" }
-];
-
-console.log(profilePic);
+const db = getFirestore(app);
 
 const divContainerCards = document.querySelector(".container-cards");
 
+const cleaners = [];
+const snap = await getDocs(collection(db, "cleaners"));
+snap.forEach((doc) => {
+  cleaners.push(doc.data());
+});
+
 function shortComment(element) { // Se le pasa un elemento directamente
-  if (element.textContent.length > 230) element.textContent = `${element.textContent.substring(0, 227)}...`;
+  if (element.textContent.length > 190) element.textContent = `${element.textContent.substring(0, 190)}...`;
 }
 
-cleaners.forEach((cleaner) => {
+cleaners.forEach(cleaner => {
   const cleanerCard = `<div class="cleaner-container">
   <div class="cleaner-image"> <!-- imagen -->
     <img src="${cleaner.image}"  class="services-profile">
   </div>
   <div class="cleaner-info"><!-- info -->
     <div class="container-name-rating">
-      <h3 class="name-cleaner">${cleaner.name}</h3>
+    <div class="container-name-city>
+      <h3 class="name-cleaner"><strong>${cleaner.name}</strong> ${cleaner.verified}
+      <h4 class="city-cleaner"><small>📍${cleaner.city}</small></h4></div>
+      </h3>
     <div class="rating-star">
-      <img class="star-icon" src="${star}" alt="">
-      <p class="rating">${cleaner.rating}</p>
+      <p class="rating"><strong><i class="fa-solid fa-star"></i>  ${cleaner.rating}</strong></p>
     </div>
-    </div>
-    <p class="cleaner-info-p"> ${cleaner.description}</p>
-    <p class="works">${cleaner.worksCount} trabajos</p>
-  </div>  
+    </div >
+    <p class="cleaner-info-p">${cleaner.description}</p>
+    <p class="works">${cleaner.works} trabajos</p>
+  </div >
   <div class="cleaner-btn"><!-- precio/boton -->
-    <p class="price">desde <strong>${cleaner.price}</strong></p>
+    <p class="price"><strong> ${cleaner.price}</strong><small>€/hora</small></p>
     <a href="/under-construction.html" class="btn hire">Contratar</a>
   </div>
-  </div>`;
-
+  </div >
+  `;
   divContainerCards.innerHTML += cleanerCard;
 });
 
