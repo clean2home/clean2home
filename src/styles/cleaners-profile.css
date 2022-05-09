@@ -39,29 +39,110 @@
 /* -----------------------------------*\
   #CLEANERS-PROFILE CARD
 \*----------------------------------- */
-
 .cleaner-profile {
   width: 70%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  margin: 50px auto;
 }
 
 .cleaner-profile-container {
   width: 100%;
+  margin: 0 auto;
   display: flex;
-  height: auto;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.cleaner-image {
+  width: 450px;
+}
+
+.cleaner-image > img {
+  width: 400px;
+  height: 400px;
+}
+
+.cleaner-name {
+  font-family: var(--ff-poppins);
+  font-size: 2.8em;
+  color: #313230;
+  display: flex;
+  align-items: center;
+}
+
+/* .about-me i {
+  margin-left: 10px;
+  font-size: 0.5em;
+  color: var(--color-light-yellow);
+}
+
+.about-me strong {
+  font-size: 0.5em;
+  margin-left: 3px;
+} */
+
+.cleaner-location {
+  min-width: 400px;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cleaner-location-city {
+  font-family: var(--ff-open-sans);
+  color: #313230;
+  font-size: 1.6em;
+}
+
+.cleaner-location-city i {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-right: 10px;
+  color: var(--color-primary);
+}
+
+.price {
+  margin-top: 60px;
+  font-family: var(--ff-open-sans);
+  color: var(--color-dark-gray);
+  font-size: 1em;
+}
+
+.price strong {
+  color: var(--color-primary);
+  font-size: 2.6em;
+  margin-left: 10px;
+}
+
+.cleaner-btn {
+  margin-top: 40px;
+  display: flex;
+}
+
+.hire {
+  background: var(--color-light-yellow);
+  color: #313230;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 0 #c18c32;
+  position: relative;
+  left: 50px;
+}
+
+.hire:hover {
+  background-color: #e5c285;
+}
+
+.hire:active {
+  box-shadow: 0 2.5px 0 #c18c32;
+  position: relative;
+  top: 5px;
 }
 
 /* -----------------------------------*\
   #CLEANERS CARDS
 \*----------------------------------- */
-.container-card {
-  position: relative;
-  top: 320px;
-  right: 80px;
-  z-index: 1;
-}
 
 .container-cards {
   top: 300px;
@@ -76,32 +157,32 @@
 
 .cleaner-container {
   font-family: var(--ff-open-sans);
-  color: #313230;
+  color: var(--color-dark-gray);
   padding: 20px;
   margin: 20px;
   display: flex;
-  width: 100%;
-  max-width: 650px;
+  width: 90%;
+  max-width: 960px;
   min-width: 560px;
-  box-shadow: 3px 5px 9px 2px #0000003e;
+  box-shadow: 3px 4px 9px 2px #0000001e;
   border-radius: 5px;
   background-color: #fff;
+  position: absolute;
 }
 
-.cleaner-image {
-  width: 450px;
+.about-me {
+  font-size: 2em;
   position: relative;
-  left: 130px;
-  top: 50px;
+  bottom: 50px;
+  font-family: var(--ff-poppins);
+  color: var(--color-dark-gray);
 }
 
-.cleaner-image > img {
-  width: 400px;
-  height: 400px;
-}
-
-.nombre-cleaner {
-  min-width: 100px;
+.about-me i {
+  font-size: 1.6em;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--color-dark-gray);
 }
 
 .cleaner-info {
@@ -109,12 +190,15 @@
 }
 
 .cleaner-info-p {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   font-size: 0.9em;
   min-height: 65px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
+  position: relative;
+  bottom: 20px;
 }
 
 .btn-container {
@@ -150,35 +234,10 @@
   margin: 1px;
 }
 
-.price {
-  text-align: center;
-  color: #00cba9;
-}
-
 .works {
   font-weight: bold;
   text-align: left;
   margin-left: 10px;
-}
-
-.cleaner-btn {
-  margin: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.hire {
-  background: #ececec;
-  color: #313230;
-  font-size: 0.8em;
-  text-align: center;
-  text-decoration: none;
-}
-
-.hire:hover {
-  background-color: #d6d6d6;
 }
 
 /* -----------------------------------*\
