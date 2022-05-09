@@ -29,7 +29,9 @@
   display: none;
 }
 
-.user-unlogged {
+.user-unlogged,
+.user-cleaner {
+  display: none;
   height: 50vh;
 }
 

@@ -3,13 +3,14 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Swal from "sweetalert2";
 import { auth, storage, db } from "../../firebase/config";
 
-export const startCreateCleaner = async(name, cp, city, description, price, image) => {
-  if (validateCleaner(name, cp, city, description, price, image)) {
+export const startCreateCleaner = async(name, cp, city, phone, description, price, image) => {
+  if (validateCleaner(name, cp, city, phone, description, price, image)) {
     const imgUrl = await uploadImage(image);
     const newCleaner = {
       name,
       cp,
       city,
+      phone,
       description,
       price,
       image: imgUrl,
@@ -47,8 +48,8 @@ const createCleaner = (cleaner) => {
   });
 };
 
-const validateCleaner = (name, cp, city, description, price, image) => {
-  if (name && (cp && cp.length === 5) && city && description && price && image) {
+const validateCleaner = (name, cp, city, phone, description, price, image) => {
+  if (name && (cp && cp.length === 5) && city && (phone && phone.length === 9) && description && price && image) {
     return true;
   }
 };
