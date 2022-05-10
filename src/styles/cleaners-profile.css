@@ -344,11 +344,13 @@ label {
 }
 
 .rating {
-  margin-left: 68px;
+  margin-left: 60px;
+  font-size: 1em;
 }
 
 .fa-star {
   color: var(--color-light-yellow);
+  margin-right: 3px;
 }
 
 /* -----------------------------------*\
@@ -356,18 +358,19 @@ label {
 \*----------------------------------- */
 
 #maps {
-  margin: 0 auto;
+  /* margin-top: 300px; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 350px;
   position: relative;
   top: 300px;
 }
 
 #maps iframe {
+  height: 100%;
   width: 100%;
-  height: 350px;
   max-width: 960px;
   border-radius: 8px;
   border-style: none;
@@ -412,7 +415,7 @@ label {
   box-shadow: 3px 5px 9px 2px #0000003e;
 }
 
-hr {
+hr .modal-contact {
   color: #31323025;
 }
 
@@ -461,6 +464,53 @@ p.modal-data {
   display: flex;
   align-items: center;
   color: var(--color-dark-gray);
+}
+
+/* -----------------------------------*\
+  #FOOTER
+\*----------------------------------- */
+
+.footer {
+  background-color: #545454;
+  color: white;
+  width: 100%;
+  padding: 4em 2em;
+}
+
+.footer-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style-position: inside;
+}
+
+.column {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  & .items {
+    list-style: none;
+    padding: 0;
+
+    & li {
+      margin-top: 0.5em;
+    }
+
+    & li a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-elements {
+  margin: 0.5em;
+}
+
+.legal {
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* -----------------------------------*\
@@ -519,26 +569,63 @@ p.modal-data {
 }
 
 @media (max-width: 760px) {
-  .header-cleaners {
-    width: 100%;
+  .cleaner-profile-container {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-  }
-
-  .cleaners-slogan {
-    padding: 10px;
+    align-items: center;
     width: 100%;
-    min-width: 350px;
-    font-size: 2.8em;
+    max-width: 960px;
+    min-width: 320px;
   }
 
-  .cleaners-form {
-    padding: 10px;
+  .cleaner-image {
+    padding-top: 10px;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 350px;
-    font-size: 0.8em;
+    justify-content: center;
+    width: 280px;
+    height: 310px;
+  }
+
+  .cleaner-image > img {
+    border-radius: 20%;
+  }
+
+  .cleaner-name {
+    font-size: 1.7em;
+  }
+
+  .cleaner-location {
+    min-width: 300px;
+    padding: 1.2em 0;
+  }
+
+  .cleaner-location-city {
+    font-size: 1.3em;
+  }
+
+  .cleaner-location-city i {
+    font-size: 1.6em;
+    top: 10px;
+  }
+
+  .price {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .price strong {
+    font-size: 2.2em;
+  }
+
+  .cleaner-btn {
+    margin-top: 20px;
+  }
+
+  .hire {
+    font-size: 0.9em;
   }
 
   .container-cards {
@@ -549,45 +636,55 @@ p.modal-data {
   }
 
   .cleaner-container {
-    width: 95%;
+    margin-top: 40px;
+    width: 90%;
     max-width: 550px;
-    min-width: 330px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .price {
-    margin-bottom: 15px;
-  }
-
-  .container-name-rating {
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cleaner-btn {
-    margin-bottom: 5px;
-  }
-
-  .cleaner-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .works {
-    margin-left: 0;
-    margin-bottom: 15px;
+  .about-me {
+    font-size: 1.7em;
   }
 
   .cleaner-info-p {
-    width: 95%;
-    text-align: center;
+    width: 100%;
     font-size: 0.9em;
+  }
+
+  #maps {
+    width: 90%;
+    position: relative;
+    top: 510px;
+  }
+
+  #maps iframe {
+    width: 100%;
+    min-width: 330px;
+  }
+
+  .modal-content {
+    width: 85%;
+    min-width: 300px;
+    padding: 1em;
+  }
+
+  .modal-header {
+    font-size: 1.6em;
+    margin: 0.5em;
+  }
+
+  .modal-data i {
+    font-size: 1.5em;
+    margin-left: 5px;
+  }
+
+  p.modal-data {
+    margin: 0.6em;
+    font-size: 0.9em;
+    margin-bottom: 20px;
   }
 }
 
