@@ -20,7 +20,7 @@ cleaners.forEach((cleaner) => {
 }
 )
 
-let cleanerName = document.getElementsByClassName('name-cleaner');
+let cleanerName = document.getElementsByClassName('cleaner-name');
 let cleanerDescription = document.getElementsByClassName('cleaner-info-p');
 let cleanerWorks = document.getElementsByClassName('works');
 let cleanerPrice = document.getElementsByClassName('price');
