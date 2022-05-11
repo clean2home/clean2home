@@ -193,7 +193,7 @@ label {
   overflow: hidden;
 }
 
-.cleaner-image > img {
+.cleaner-image>img {
   width: auto;
   height: auto;
   border-radius: 10%;
@@ -561,7 +561,7 @@ p.modal-data {
     overflow: hidden;
   }
 
-  .cleaner-image > img {
+  .cleaner-image>img {
     width: auto;
     height: auto;
     border-radius: 10%;
@@ -589,7 +589,7 @@ p.modal-data {
     height: 310px;
   }
 
-  .cleaner-image > img {
+  .cleaner-image>img {
     border-radius: 20%;
   }
 
