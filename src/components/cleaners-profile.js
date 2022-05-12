@@ -14,26 +14,31 @@ const cleaners = [
 const REVIEWS = [
     {
         id: 1,
+        userName: 'Patricia',
         rating: 5,
         review: "Muy maja y buena limpiadora"
     },
     {
         id: 2,
+        userName: 'Loli',
         rating: 5,
         review: "Trabaja muy bien"
     },
     {
         id: 3,
+        userName: 'Manuel',
         rating: 5,
         review: "Muy simpática y divertida"
     },
     {
         id: 4,
+        userName: 'Fernando',
         rating: 5,
         review: "Encantadora"
     },
     {
         id: 5,
+        userName: 'Javier',
         rating: 5,
         review: "Muy bien todo"
     }
@@ -63,27 +68,14 @@ cleanerPrice[0].textContent = cleanerProfile.price;
 //cleanerRating[0].textContent = cleanerProfile.rating;
 
 
-let divReview = document.getElementById('review-container');
+// let divReview = document.getElementById('review-container');
 
-REVIEWS.forEach((review) => {
-    divReview.innerHTML += `<div class='review'>
-        <h3>#${review.id}</h3>
-        <p>${review.review}</p>
-      </div>`;
-});
+// REVIEWS.forEach((review) => {
+//     divReview.innerHTML += `<div class='review'>
+//         <h3 class='cleaner-info-p'>#${review.id} ${review.userName} &nbsp;<img class="star-icon" src="/assets/star.svg" style='width: 15px; margin-top: -25px;'alt> &nbsp; ${review.rating}</h3>
 
+//         <p class='cleaner-info-p'>${review.review}</p>
+//       </div>`;
+// });
 
-
-
-function iniciarMap() {
-    var coord = { lat: -34.5956145, lng: -58.4431949 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: coord
-    });
-    var marker = new google.maps.Marker({
-        position: coord,
-        map: map
-    });
-}
 

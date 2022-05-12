@@ -475,6 +475,7 @@ p.modal-data {
   color: white;
   width: 100%;
   padding: 4em 2em;
+  margin-top: 30%;
 }
 
 .footer-nav {
@@ -686,6 +687,12 @@ p.modal-data {
     font-size: 0.9em;
     margin-bottom: 20px;
   }
+
+  .footer {
+    margin-top: 90%;
+  }
+
+
 }
 
 @media (max-width: 500px) {
@@ -708,4 +715,9 @@ p.modal-data {
     font-size: 1.1em;
     align-self: flex-start;
   }
+
+  .footer {
+    margin-top: 130%;
+  }
+
 }
