@@ -84,6 +84,7 @@ const printCleanersWithFilter = async() => {
       <h3 class="name-cleaner"><strong>${doc.data().name}</strong> ${doc.data().verified}
       <h4 class="city-cleaner"><small>📍${doc.data().city}</small></h4></div >
       </h3 >
+
       <div class="rating-star">
       <p class="rating"><strong><i class="fa-solid fa-star"></i>  ${doc.data().rating}</strong></p>
       </div>

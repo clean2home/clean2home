@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link defer href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet" />
+
+     <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/cleaners-profile.css">
+   
+    <title>Cleaners-profile</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-logo">
+          <a href="/"><img src="./assets/logo.svg" alt="Clean2Home" title="Clean2Home" /></a>
+        </li>
+        <li class="navbar-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </li>
+        <li class="navbar-links">
+          <a href="/">Inicio</a>
+        </li>
+        <li class="navbar-links">
+          <a href="cleaners.html">Servicios</a>
+        </li>
+        <li class="navbar-links">
+          <a href="about-us.html">Sobre nosotros</a>
+        </li>
+        <li class="navbar-links">
+          <a href="como-funciona.html">Como funciona</a>
+        </li>
+        <li class="navbar-links">
+          <a href="under-construction.html">Hazte cleaner</a>
+        </li>
+        <li class="navbar-links">
+          <a href="#" id="login-register">Iniciar sesión</a>
+        </li>
+        <li class="navbar-links">
+          <div class="navbar-user">
+            <span id="navbar-name"></span>
+            <div class="navbar-img-container">
+              <img referrerpolicy="no-referrer" id="navbar-img" src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" alt="user-image">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- Login/Register Modal -->
+    <div id="login-register-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-box">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <div class="login-block active">
+            <h2>Inicia sesión</h2>
+            <form action="POST" class="login-register-form" id="login-form">
+              <div class="form-group">
+                <label for="emailLogin">Email</label>
+                <input type="email" class="form-control" name="emailLogin" id="emailLogin" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="passwordLogin">Contraseña</label>
+                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+              </div>
+              <button class="btn login-btn">Iniciar sesión</button>
+            </form>
+            <hr />
+            <div class="btn google-btn">
+              <div class="google-icon-wrapper">
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+              </div>
+              <p class="btn-text"><b>Sign in with Google</b></p>
+            </div>
+            <a href="#" class="toggle-login-register">¿Aún no tienes cuenta? Regístrate</a>
+          </div>
+          <div class="register-block">
+            <h2>Crea una cuenta</h2>
+            <form action="POST" class="login-register-form" id="register-form">
+              <div class="form-group">
+                <label for="nameRegister">Nombre</label>
+                <input type="text" class="form-control" name="nameRegister"  id="nameRegister" placeholder="&#xf007; tu nombre" />
+                <label class="error-name-msg-hidden">Nombre introducido inválido</label>
+              </div>
+              <div class="form-group">
+                <label for="emailRegister">Email</label>
+                <input type="email" class="form-control" name="emailRegister" id="emailRegister" placeholder="&#xf0e0; tu@email.com" />
+                <label class="error-email-msg-hidden">Email introducido inválido</label>
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Contraseña</label>
+                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <label class="error-pass-msg-hidden">Contraseña introducida inválida</label>
+              </div>
+              <div class="form-group">
+                <label for="passwordRegister">Repite tu contraseña</label>
+                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <label class="error-passrep-msg-hidden">Las contraseñas no coinciden</label>
+              </div>
+              <button class="btn register-btn">Crear cuenta</button>
+            </form>
+            <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+        </div>
+        <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
+          <path fill="#00cba9" fill-opacity="1"
+            d="M0,64L40,101.3C80,139,160,213,240,208C320,203,400,117,480,112C560,107,640,181,720,213.3C800,245,880,235,960,229.3C1040,224,1120,224,1200,218.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+    </div>
+  </header>
+  <!-- Fin del NAV, inicio CLEANER PROFILE -->
+    <section class="cleaner-profile">
+      <!-- Botón de volver -->
+      <a href="javascript: history.go(-1)" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="cleaner-profile-container">
+            <div class="cleaner-image"> <!-- imagen -->
+                <img src="./assets/cleaner-profile/perfil_cleaner.jpg"  class="services-profile">
+              </div>
+            <div class="cleaner-location">
+              <h2 class="cleaner-name">Lourdes Sánchez</h2>
+              <h3 class="cleaner-location-city">
+                <a href="#maps"><i class="fa-solid fa-map-pin"></i></a>
+                Elche, Alicante<p class="cp-profile">CP 03202</p>
+              </h3>
+              <p class="price">desde <strong>15,00€/h</strong></p>
+              <div class="cleaner-btn">
+                <a href="#modal-click" class="btn hire">Contactar</a>
+              </div>
+            </div>
+        </div>
+        <div class="container-cards">
+          <div class="cleaner-container">
+            <div class="cleaner-info">  <!-- info -->
+              <h3 class="about-me"><i class="fa-solid fa-quote-left"></i>Sobre mí</h3>
+              <p class="cleaner-info-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cumque aliquid veniam iste. Porro eaque cumque obcaecati. Dicta debitis voluptates earum, quos iure voluptate. Voluptas laboriosam sed recusandae tempore ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nulla explicabo praesentium reprehenderit delectus aperiam tenetur nemo necessitatibus, quaerat consequuntur inventore eius suscipit recusandae. Ea pariatur error iste ut laudantium.</p>
+              <p class="works">137 trabajos<span class="rating"><a href="#reviews"><i class="fa-solid fa-star"></i></a>5</span></p>
+            </div>  
+        </div>
+      </div>
+        <!--Modal-->
+    <div id="modal-click" class="modal-box">
+      <div class="modal-content">
+          <h2 class="modal-header">CONTACTO</h2>
+          <hr class="modal-contact">
+          <p class="modal-data modal-phone"><i class="fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=34656976735">656976735</a></p>
+          <p class="modal-data modal-email"><i class="fa-solid fa-envelope"></i><a href="mailto:lourdes-clean@gmail.com">lourdes-clean@gmail.com</a></p>
+          <a href="#" class="modal-close">&times;</a>
+      </div>
+  </div>
+  <!-- MAPS -->
+      <div id="maps">
+        <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7OsQRiEZ0xQPyy2cY9UxCdP-u5KCR5Ew&q=madrid"></iframe>
+
+      </div>
+  <div id="reviews">
+    <!-- AQUÍ VAN LAS REVIEWS, LLEVA UN ID PORQUE CUANDO PINCHAS EN LA ESTRELLA TE LLEVA AQUÍ-->
+    <div id="review-container">
+  
+    </div>
+  </div>
+    </section>
+    <!--FOOTER -->
+  <footer class="footer">
+    <ul class="footer-nav">
+      <li class="column">
+        <h3 class="column-title">Contacto</h3>
+        <ul class="items">
+          <li>
+            <p>922 25 88 744</p>
+          </li>
+          <li>
+            <a href="mailto:clean2homeeoi@gmail.com" class="mailto">contacto@clean2home.es</a>
+          </li>
+        </ul>
+      </li>
+      <li class="column">
+        <h3 class="column-title">Servicios</h3>
+        <ul class="items">
+          <li>
+            <a href="cleaners.html">Cleaners</a>
+          </li>
+          <li>
+            <a href="under-construction.html">Limpieza</a>
+          </li>
+          <li>
+            <a href="under-construction.html">Comida</a>
+          </li>
+          <li>
+            <a href="under-construction.html">Limpieza de ropa</a>
+          </li>
+        </ul>
+      </li>
+      <li class="column">
+        <h3 class="column-title">Información</h3>
+        <ul class="items">
+          <li>
+            <a href="como-funciona.html">Cómo funciona</a>
+          </li>
+          <li>
+            <a href="about-us.html">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="under-construction.html">Trabaja con nosotros</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="legal">
+      <small>&copy; 2022 <b> Clean2Home </b> - Todos los Derechos Reservados </small>
+    </div>
+  </footer>
+  <script src="components/cleaners.js"></script>
+  <script src="components/cleaners-profile.js"></script>
+</body>
+</html>
