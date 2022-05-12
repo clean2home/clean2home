@@ -3,18 +3,28 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Swal from "sweetalert2";
 import { auth, storage, db } from "../../firebase/config";
 
+function deleteAccents(string) {
+  const accents = { á: "a", é: "e", í: "i", ó: "o", ú: "u", Á: "A", É: "E", Í: "I", Ó: "O", Ú: "U" };
+  return string.toLowerCase().split("").map(word => accents[word] || word).join("").toString();
+}
+
 export const startCreateCleaner = async(name, cp, city, phone, description, price, image) => {
   if (validateCleaner(name, cp, city, phone, description, price, image)) {
+    const userEmail = auth.currentUser.email;
     const imgUrl = await uploadImage(image);
     const newCleaner = {
       name,
       cp,
       city,
+      citySearch: deleteAccents(city),
       phone,
       description,
       price,
       image: imgUrl,
-      rating: 0
+      rating: 0,
+      verified: false,
+      email: userEmail,
+      works: 0
     };
     createCleaner(newCleaner);
   } else {
