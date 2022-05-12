@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
 
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
@@ -26,16 +25,8 @@
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link defer href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
-    rel="stylesheet" />
-    
-  <!-- ICONS -->
-  <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
 
-  <script type="module" src="./main.js"></script>
+
   <!-- META TAGS -->
   <meta name="description"
     content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
@@ -79,14 +70,16 @@
           <div class="navbar-user">
             <span id="navbar-name"></span>
             <div class="navbar-img-container">
-              <img referrerpolicy="no-referrer" id="navbar-img" src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" alt="user-image">
+              <img referrerpolicy="no-referrer" id="navbar-img"
+                src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
+                alt="user-image">
             </div>
           </div>
         </li>
       </ul>
     </nav>
 
-    <!-- Login/Register Modal -->
+    <!-- Login/Register/ResetPassword Modal -->
     <div id="login-register-modal" class="modal">
       <!-- Modal content -->
       <div class="modal-box">
@@ -97,18 +90,22 @@
             <form action="POST" class="login-register-form" id="login-form">
               <div class="form-group">
                 <label for="emailLogin">Email</label>
-                <input type="email" class="form-control" name="emailLogin" id="emailLogin" placeholder="&#xf0e0; tu@email.com" />
+                <input type="email" class="form-control" name="emailLogin" id="emailLogin"
+                  placeholder="&#xf0e0; tu@email.com" />
               </div>
               <div class="form-group">
                 <label for="passwordLogin">Contraseña</label>
-                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin"
+                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
               </div>
               <button class="btn login-btn">Iniciar sesión</button>
+              <a href="#" class="toggle-reset-password">¿Has olvidado tu contraseña?</a>
             </form>
             <hr />
             <div class="btn google-btn">
               <div class="google-icon-wrapper">
-                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                <img class="google-icon"
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
               </div>
               <p class="btn-text"><b>Sign in with Google</b></p>
             </div>
@@ -119,28 +116,44 @@
             <form action="POST" class="login-register-form" id="register-form">
               <div class="form-group">
                 <label for="nameRegister">Nombre</label>
-                <input type="text" class="form-control" name="nameRegister"  id="nameRegister" placeholder="&#xf007; tu nombre" />
+                <input type="text" class="form-control" name="nameRegister" id="nameRegister"
+                  placeholder="&#xf007; tu nombre" />
                 <label class="error-name-msg-hidden">Nombre introducido inválido</label>
               </div>
               <div class="form-group">
                 <label for="emailRegister">Email</label>
-                <input type="email" class="form-control" name="emailRegister" id="emailRegister" placeholder="&#xf0e0; tu@email.com" />
+                <input type="email" class="form-control" name="emailRegister" id="emailRegister"
+                  placeholder="&#xf0e0; tu@email.com" />
                 <label class="error-email-msg-hidden">Email introducido inválido</label>
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Contraseña</label>
                 <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
-                <label class="error-pass-msg-hidden">Contraseña introducida inválida</label>
+                <label class="error-pass-msg-hidden">Contraseña introducida inválida (debe contener al menos, 6 caracteres o más, una mayuscula, una minúscula y un caracter numérico)</label>
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Repite tu contraseña</label>
-                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister"
+                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
                 <label class="error-passrep-msg-hidden">Las contraseñas no coinciden</label>
               </div>
               <button class="btn register-btn">Crear cuenta</button>
             </form>
             <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
           </div>
+
+          <div class="reset-password-block">
+            <h2>Reestablecer contraseña</h2>
+            <form action="POST" class="reset-password-form" id="reset-password-form">
+              <div class="form-group reset-password">
+                <label for="emailReset">Email</label>
+                <input type="email" class="form-control" name="emailReset" id="emailReset" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <button class="btn register-btn">Enviar correo electrónico</button>
+            </form>
+            <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+
         </div>
         <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
           <path fill="#00cba9" fill-opacity="1"
@@ -365,9 +378,9 @@
             </li>
           </ul>
           <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+            <button class="glide__arrow glide__arrow--left" aria-label="izquierda" data-glide-dir="<"><i
                 class="fa-solid fa-chevron-left"></i></button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+            <button class="glide__arrow glide__arrow--right" aria-label="derecha" data-glide-dir=">"><i
                 class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
@@ -437,6 +450,16 @@
     <div class="legal">
       <small>&copy; 2022 <b> Clean2Home </b> - Todos los Derechos Reservados </small>
     </div>
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
+    <script type="module" src="./main.js"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link defer
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet" />
+
   </footer>
 </body>
 
