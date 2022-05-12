@@ -107,4 +107,3 @@ if (queryString === "") {
 } else {
   printCleanersWithFilter();
 }
-
