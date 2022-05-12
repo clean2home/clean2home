@@ -10,7 +10,6 @@ import { startCarousel } from "./components/actions/ui/carousel";
 
 // Get user
 onAuthStateChanged(auth, (user) => {
-  console.log(user);
   if (user) {
     setupUserUI(user);
   } else {

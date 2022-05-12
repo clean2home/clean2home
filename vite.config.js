@@ -18,6 +18,7 @@ module.exports = {
         about: resolve(__dirname, "src/about-us.html"),
         comofunciona: resolve(__dirname, "src/como-funciona.html"),
         underconstruction: resolve(__dirname, "src/under-construction.html"),
+        haztecleaner: resolve(__dirname, "src/hazte-cleaner.html"),
       }
     }
   }
