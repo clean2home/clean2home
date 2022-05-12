@@ -137,8 +137,10 @@
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Contraseña</label>
-                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
-                <label class="error-pass-msg-hidden">Contraseña introducida inválida (debe contener al menos, 6 caracteres o más, una mayuscula, una minúscula y un caracter numérico)</label>
+                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister"
+                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
+                <label class="error-pass-msg-hidden">Contraseña introducida inválida (debe contener al menos, 6
+                  caracteres o más, una mayuscula, una minúscula y un caracter numérico)</label>
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Repite tu contraseña</label>
@@ -156,7 +158,8 @@
             <form action="POST" class="reset-password-form" id="reset-password-form">
               <div class="form-group reset-password">
                 <label for="emailReset">Email</label>
-                <input type="email" class="form-control" name="emailReset" id="emailReset" placeholder="&#xf0e0; tu@email.com" />
+                <input type="email" class="form-control" name="emailReset" id="emailReset"
+                  placeholder="&#xf0e0; tu@email.com" />
               </div>
               <button class="btn register-btn">Enviar correo electrónico</button>
             </form>
@@ -180,11 +183,13 @@
           <h1 class="cleaners-slogan">Encuentra a la persona ideal para <strong>mimar tu hogar</strong></h1>
         </div>
         <form class="cleaners-form">
-          <input type="text" placeholder="Introduce C.P o ciudad">
-          <a href="under-construction.html" class="btn search">buscar</a>
+          <input type="text" name="cityFilter" id="cityFilter" placeholder="Introduce C.P o ciudad">
+          <a href="javascript:;"
+            onclick="this.href='cleaners.html?cityFilter=' + document.getElementById('cityFilter').value"
+            class="btn search">Buscar</a>
         </form>
       </div>
-      <div class="container-cards">
+      <div class=" container-cards">
         <!-- contenedor -->
       </div>
       <div class="btn-container">

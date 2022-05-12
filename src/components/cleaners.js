@@ -1,9 +1,13 @@
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "./firebase/config";
 
 const divContainerCards = document.querySelector(".container-cards");
+function deleteAccents(string) {
+  const accents = { á: "a", é: "e", í: "i", ó: "o", ú: "u", Á: "A", É: "E", Í: "I", Ó: "O", Ú: "U" };
+  return string.toLowerCase().split("").map(word => accents[word] || word).join("").toString();
+}
 
-const getCleaners = async() => {
+const getCleaners = async () => {
   const cleaners = [];
   const collRef = collection(db, "cleaners");
   const querySnapshot = await getDocs(collRef);
@@ -17,7 +21,7 @@ const getCleaners = async() => {
   return cleaners;
 };
 
-const printCleaners = async() => {
+const printCleaners = async () => {
   const cleaners = await getCleaners();
 
   const shortComment = (element) => { // Se le pasa un elemento directamente
@@ -56,3 +60,38 @@ const printCleaners = async() => {
 };
 
 printCleaners();
+
+const queryString = decodeURI(window.location.search);
+const urlParams = new URLSearchParams(queryString);
+
+const cityFilter = deleteAccents(urlParams.get("cityFilter"));
+
+console.log(cityFilter);
+
+const q = query(collection(db, "cleaners"), where("citySearch", "==", cityFilter));
+
+const querySnapshot = await getDocs(q);
+querySnapshot.forEach((doc) => {
+  divContainerCards.innerHTML = `<div class="cleaner-container">
+  <div class="cleaner-image"> <!-- imagen -->
+    <img src="${doc.data().image}"  class="services-profile">
+  </div>
+  <div class="cleaner-info"><!-- info -->
+    <div class="container-name-rating">
+    <div class="container-name-city>
+      <h3 class="name-cleaner"><strong>${doc.data().name}</strong> ${doc.data().verified}
+      <h4 class="city-cleaner"><small>📍${doc.data().city}</small></h4></div >
+      </h3 >
+  <div class="rating-star">
+    <p class="rating"><strong><i class="fa-solid fa-star"></i>  ${doc.data().rating}</strong></p>
+  </div>
+    </div >
+    <p class="cleaner-info-p">${doc.data().description}</p>
+    <p class="works">${doc.data().works} trabajos</p>
+  </div >
+  <div class="cleaner-btn"><!-- precio/boton -->
+    <p class="price"><strong> ${doc.data().price}</strong><small>€/hora</small></p>
+    <a href="/under-construction.html" class="btn hire">Contratar</a>
+  </div>
+  </div > `;
+});
