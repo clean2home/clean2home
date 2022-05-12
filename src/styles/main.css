@@ -636,7 +636,8 @@ label {
 }
 
 .register-block,
-.login-block {
+.login-block,
+.reset-password-block {
   display: none;
 
   &.active {
@@ -644,7 +645,8 @@ label {
   }
 }
 
-.login-register-form .form-group {
+.login-register-form .form-group,
+.reset-password {
   margin: 1.3em 0;
 }
 
@@ -688,7 +690,8 @@ label {
   }
 }
 
-.toggle-login-register {
+.toggle-login-register,
+.toggle-reset-password {
   margin-top: 1em;
   display: block;
   font-family: var(--ff-poppins);

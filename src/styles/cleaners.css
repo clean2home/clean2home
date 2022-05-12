@@ -78,6 +78,10 @@
   #CLEANERS CARDS
 \*----------------------------------- */
 
+.fa-circle-check {
+  color: #00cba9;
+}
+
 .container-cards {
   margin: 20px auto;
   padding: 10px;
@@ -101,15 +105,16 @@
 }
 
 .cleaner-image {
-  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 15px;
 }
 
 .cleaner-image > img {
-  width: 130px;
-  height: 130px;
+  object-fit: cover;
+  height: 140px;
+  width: 140px;
 }
 
 .nombre-cleaner {
@@ -144,6 +149,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .rating-star {
@@ -152,9 +158,8 @@
   justify-items: center;
 }
 
-.star-icon {
-  width: 15px;
-  margin: 5px;
+.fa-star {
+  color: #f9c339;
 }
 
 .rating {
@@ -164,7 +169,8 @@
 
 .price {
   text-align: center;
-  color: #00cba9;
+  color: #313230;
+  font-size: 1.6em;
 }
 
 .works {
@@ -342,6 +348,7 @@
   .container-name-rating {
     max-width: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

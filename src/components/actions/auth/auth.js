@@ -1,11 +1,10 @@
 import Swal from "sweetalert2/dist/sweetalert2.all.js";
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { setDoc, doc, getDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 import { auth, db } from "../../firebase/config";
-
 import { isEmail, isStrongPassword } from "validator";
 import isAlpha from "validator/lib/isAlpha";
-import { toggleModal } from "../ui/modal";
+import { toggleModal, closeResetPasswordModal } from "../ui/modal";
 import { setupUserUI } from "../ui/navbar";
 
 const modalLoginRegister = document.querySelector("#login-register-modal");
@@ -183,4 +182,27 @@ export const startSignout = () => {
   }).catch((error) => {
     console.log(error);
   });
+};
+
+const showResetPasswordNotification = () => {
+  Swal.fire({
+    icon: "success",
+    title: "Si tu correo está registrado, recibirás un mail en tu bandeja de entrada para resetear tu contraseña",
+    timer: 4000,
+    timerProgressBar: true,
+    showConfirmButton: false,
+    allowOutsideClick: false
+  });
+};
+
+export const resetPassword = (email) => {
+  toggleModal(modalLoginRegister);
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      showResetPasswordNotification();
+    })
+    .catch(() => {
+      closeResetPasswordModal();
+      showResetPasswordNotification();
+    });
 };
