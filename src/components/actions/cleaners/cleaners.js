@@ -44,6 +44,8 @@ const createCleaner = (cleaner) => {
       title: "¡Enhorabuena!",
       icon: "success",
       text: "Ya eres cleaner"
+    }).then(() => {
+      window.location.replace(window.location.origin + "/cleaners.html");
     });
   });
 };
