@@ -22,7 +22,7 @@ export const startCreateCleaner = async(name, cp, city, phone, description, pric
       price,
       image: imgUrl,
       rating: 0,
-      verified: false,
+      verified: "",
       email: userEmail,
       works: 0
     };
