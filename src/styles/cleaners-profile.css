@@ -79,74 +79,6 @@ label {
 }
 
 /* -----------------------------------*\
-  LOGO & MENU
-\*----------------------------------- */
-.navbar-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 4em 0;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.navbar-logo {
-  user-select: none;
-  width: 200px;
-  margin-right: auto;
-}
-
-.navbar-links {
-  display: inline;
-  font-family: var(--ff-poppins);
-  margin-left: 4em;
-
-  & a {
-    color: var(--color-dark-gray);
-  }
-
-  & a:hover {
-    color: var(--color-primary);
-  }
-
-  & a::after {
-    margin: auto;
-    content: "";
-    width: 0;
-    height: 2px;
-    display: block;
-    background: var(--color-primary);
-    transition: 300ms;
-  }
-
-  & a:hover::after {
-    width: 100%;
-  }
-}
-
-.navbar-user {
-  display: none;
-  font-size: 1.4em;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  & img {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-left: 1em;
-  }
-}
-
-.navbar-toggle {
-  display: none;
-  font-size: 1.5em;
-}
-
-/* -----------------------------------*\
   #CLEANERS-PROFILE CARD
 \*----------------------------------- */
 .back-icon {
@@ -535,40 +467,6 @@ p.modal-data {
   #MEDIA QUERIES
 \*----------------------------------- */
 
-@media (max-width: 1024px) {
-  .navbar-list {
-    flex-wrap: wrap;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    margin: 0.5em;
-
-    & a::after {
-      margin-top: 0.5em;
-    }
-
-    & a:hover::after {
-      width: 30%;
-    }
-  }
-
-  .active {
-    display: block;
-    margin-top: 1em;
-
-    &:first-child {
-      margin-top: 3em;
-    }
-  }
-}
-
 @media (max-width: 800px) {
   .cleaner-image {
     padding-top: 45px;
@@ -711,12 +609,6 @@ p.modal-data {
 }
 
 @media (max-width: 500px) {
-  .navbar-list {
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 2em;
-  }
-
   .footer-nav {
     flex-direction: column;
     padding: 2em;
