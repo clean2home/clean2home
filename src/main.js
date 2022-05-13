@@ -43,7 +43,7 @@ const modalLoginRegister = document.querySelector("#login-register-modal");
 const modalClose = document.querySelector("#close-modal");
 const toggleLoginRegisterButton = document.querySelectorAll(".toggle-login-register");
 const googleLoginButton = document.querySelector(".google-btn");
-const navbarImg = document.querySelector("#navbar-img");
+const navbarLogout = document.querySelector(".navbar-logout");
 const toggleResetPasswordButton = document.querySelector(".toggle-reset-password");
 
 if (joinAsUser) {
@@ -93,4 +93,4 @@ registerForm.addEventListener("blur", function(event) {
 
 googleLoginButton.addEventListener("click", () => startLoginWithGoogle());
 
-navbarImg.addEventListener("click", () => startSignout());
+navbarLogout.addEventListener("click", () => startSignout());

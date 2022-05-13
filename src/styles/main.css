@@ -143,6 +143,11 @@ label {
   }
 }
 
+.navbar-logout {
+  display: none;
+  font-size: 0.7em;
+}
+
 .navbar-toggle {
   display: none;
   font-size: 1.5em;
