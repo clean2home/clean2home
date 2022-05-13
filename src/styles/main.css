@@ -759,21 +759,36 @@ label {
 
 @media (max-width: 1024px) {
   .navbar-list {
+    top: 0;
     flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
   }
 
   .navbar-toggle {
     display: block;
+    margin-right: 2em;
   }
 
   .navbar-links {
+    margin: 0;
+    padding: 0.5em 0;
     display: none;
-    width: 100%;
+    width: 100vw;
     text-align: center;
-    margin: 0.5em;
 
     & a::after {
-      margin-top: 0.5em;
+      margin: auto;
+      content: "";
+      width: 0;
+      height: 2px;
+      display: block;
+      background: white;
+      transition: 300ms;
+    }
+
+    & a:hover {
+      color: white;
     }
 
     & a:hover::after {
@@ -781,12 +796,32 @@ label {
     }
   }
 
-  .active {
+  .navbar-logo {
+    margin-left: 2em;
+  }
+
+  .navbar-logo.active {
+    display: none;
+  }
+
+  .navbar-links.active {
     display: block;
-    margin-top: 1em;
+    margin: 0;
+    background: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-primary);
+      color: white;
+    }
 
     &:first-child {
       margin-top: 3em;
+    }
+
+    &:last-child {
+      box-shadow: 0 10px 10px rgb(87 87 87 / 47.3%);
+      padding-bottom: 2em;
     }
   }
 
@@ -853,8 +888,14 @@ label {
 @media (max-width: 500px) {
   .navbar-list {
     width: 100%;
-    padding-left: 1em;
-    padding-right: 2em;
+  }
+
+  .navbar-toggle {
+    margin-right: 1em;
+  }
+
+  .navbar-logo {
+    margin-left: 1em;
   }
 
   .home {

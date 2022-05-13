@@ -79,79 +79,6 @@ label {
 }
 
 /* -----------------------------------*\
-  LOGO & MENU
-\*----------------------------------- */
-.navbar-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 4em 0;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.navbar-logo {
-  user-select: none;
-  width: 200px;
-  margin-right: auto;
-}
-
-.navbar-links {
-  display: inline;
-  font-family: var(--ff-poppins);
-  margin-left: 4em;
-
-  & a {
-    color: var(--color-dark-gray);
-  }
-
-  & a:hover {
-    color: var(--color-primary);
-  }
-
-  & a::after {
-    margin: auto;
-    content: "";
-    width: 0;
-    height: 2px;
-    display: block;
-    background: var(--color-primary);
-    transition: 300ms;
-  }
-
-  & a:hover::after {
-    width: 100%;
-  }
-}
-
-.navbar-user {
-  display: none;
-  font-size: 1.4em;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  & img {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-left: 1em;
-  }
-}
-
-.navbar-toggle {
-  display: none;
-  font-size: 1.5em;
-}
-
-.navbar-logout {
-  display: none;
-  font-size: 0.7em;
-}
-
-/* -----------------------------------*\
   #CLEANERS-PROFILE CARD
 \*----------------------------------- */
 .back-icon {
@@ -202,6 +129,8 @@ label {
   width: auto;
   height: auto;
   border-radius: 10%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .cleaner-name {
@@ -227,20 +156,35 @@ label {
   font-size: 1.6em;
 }
 
+.cleaner-location-city a {
+  display: flex;
+  color: #313230;
+  justify-content: center;
+  align-items: center;
+}
+
 .cleaner-location-city i {
   font-size: 1.2em;
   position: relative;
   top: 5px;
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   color: var(--color-primary);
 }
 
+.works-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .rating {
+    font-size: 1.5em;
+  }
+}
+
 .cp-profile {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 0.6em;
   position: relative;
-  left: 38px;
 }
 
 .price {
@@ -375,8 +319,8 @@ label {
 
 #maps iframe {
   height: 100%;
-  width: 100%;
-  max-width: 960px;
+  width: 120%;
+  max-width: 1220px;
   border-radius: 8px;
   border-style: none;
   box-shadow: 3px 4px 9px 2px #0000001e;
@@ -523,40 +467,6 @@ p.modal-data {
   #MEDIA QUERIES
 \*----------------------------------- */
 
-@media (max-width: 1024px) {
-  .navbar-list {
-    flex-wrap: wrap;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    margin: 0.5em;
-
-    & a::after {
-      margin-top: 0.5em;
-    }
-
-    & a:hover::after {
-      width: 30%;
-    }
-  }
-
-  .active {
-    display: block;
-    margin-top: 1em;
-
-    &:first-child {
-      margin-top: 3em;
-    }
-  }
-}
-
 @media (max-width: 800px) {
   .cleaner-image {
     padding-top: 45px;
@@ -699,12 +609,6 @@ p.modal-data {
 }
 
 @media (max-width: 500px) {
-  .navbar-list {
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 2em;
-  }
-
   .footer-nav {
     flex-direction: column;
     padding: 2em;

@@ -24,9 +24,12 @@ if (carouselContainer) {
 }
 
 // NAVBAR
-const toggleButton = document.querySelector(".navbar-toggle");
+const toggleButton = document.querySelector(".hamburger");
 const navbarLinks = document.querySelectorAll(".navbar-links");
+const navbarLogo = document.querySelector(".navbar-logo");
 function navbarRes() {
+  toggleButton.classList.toggle("is-active");
+  navbarLogo.classList.toggle("active");
   for (let i = 0; i < navbarLinks.length; i++) {
     navbarLinks[i].classList.toggle("active");
   }

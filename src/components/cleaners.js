@@ -50,7 +50,7 @@ const printCleaners = async() => {
     </div >
     <div class="cleaner-btn"><!-- precio/boton -->
       <p class="price"><strong> ${cleaner.price}</strong><small>€/hora</small></p>
-      <a href="/under-construction.html" class="btn hire">Contratar</a>
+      <a href="/cleaners-profile.html?id=${cleaner.id}" class="btn hire">Contratar</a>
     </div>
     </div >
     `;
@@ -94,7 +94,7 @@ const printCleanersWithFilter = async() => {
       </div >
       <div class="cleaner-btn"><!-- precio/boton -->
       <p class="price"><strong> ${doc.data().price}</strong><small>€/hora</small></p>
-      <a href="/under-construction.html" class="btn hire">Contratar</a>
+      <a href="/cleaners-profile.html?id=${doc.id}" class="btn hire">Contratar</a>
       </div>
       </div > `;
       divContainerCards.innerHTML += cleanerCard;
