@@ -55,7 +55,7 @@ const createCleaner = (cleaner) => {
       icon: "success",
       text: "Ya eres cleaner"
     }).then(() => {
-      window.location.replace(window.location.origin + "/cleaners.html");
+      window.location.replace(window.location.origin + `/cleaners-profile.html?id=${userId}`);
     });
   });
 };

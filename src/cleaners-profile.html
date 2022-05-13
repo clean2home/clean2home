@@ -2,9 +2,30 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="./styles/cleaners-profile.css">
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +35,18 @@
 
   <!-- ICONS -->
   <script src="https://kit.fontawesome.com/790908a15c.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/cleaners-profile.css">
 
-  <title>Cleaners-profile</title>
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./components/cleaners-profile.js"></script>
+  <!-- META TAGS -->
+  <meta name="description"
+    content="Somos una empresa de servicos en la que ayudamos a conectar personas que necesitan ayuda con sus tareas del hogar">
+  <meta name="keywords" content="limpieza, servicio, limpiador, trabajo" />
+  <meta name="robots" content="index" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <link rel="canonical" href="https://clean2home.es/" />
+
+  <title>Clean2Home | Perfil</title>
 </head>
 
 <body>
@@ -42,7 +72,7 @@
           <a href="como-funciona.html">Como funciona</a>
         </li>
         <li class="navbar-links">
-          <a href="under-construction.html">Hazte cleaner</a>
+          <a href="hazte-cleaner.html">Hazte cleaner</a>
         </li>
         <li class="navbar-links">
           <a href="#" id="login-register">Iniciar sesión</a>
@@ -50,16 +80,13 @@
         <li class="navbar-links">
           <div class="navbar-user">
             <span id="navbar-name"></span>
-            <div class="navbar-img-container">
-              <img referrerpolicy="no-referrer" id="navbar-img"
-                src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
-                alt="user-image">
-            </div>
+            <img referrerpolicy="no-referrer" id="navbar-img" src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" alt="user-image">
           </div>
         </li>
       </ul>
     </nav>
-    <!-- Login/Register Modal -->
+
+    <!-- Login/Register/ResetPassword Modal -->
     <div id="login-register-modal" class="modal">
       <!-- Modal content -->
       <div class="modal-box">
@@ -70,21 +97,19 @@
             <form action="POST" class="login-register-form" id="login-form">
               <div class="form-group">
                 <label for="emailLogin">Email</label>
-                <input type="email" class="form-control" name="emailLogin" id="emailLogin"
-                  placeholder="&#xf0e0; tu@email.com" />
+                <input type="email" class="form-control" name="emailLogin" id="emailLogin" placeholder="&#xf0e0; tu@email.com" />
               </div>
               <div class="form-group">
                 <label for="passwordLogin">Contraseña</label>
-                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin"
-                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
+                <input type="password" class="form-control" name="passwordLogin" id="passwordLogin" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
               </div>
               <button class="btn login-btn">Iniciar sesión</button>
+              <a href="#" class="toggle-reset-password">¿Has olvidado tu contraseña?</a>
             </form>
             <hr />
             <div class="btn google-btn">
               <div class="google-icon-wrapper">
-                <img class="google-icon"
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
               </div>
               <p class="btn-text"><b>Sign in with Google</b></p>
             </div>
@@ -95,32 +120,41 @@
             <form action="POST" class="login-register-form" id="register-form">
               <div class="form-group">
                 <label for="nameRegister">Nombre</label>
-                <input type="text" class="form-control" name="nameRegister" id="nameRegister"
-                  placeholder="&#xf007; tu nombre" />
+                <input type="text" class="form-control" name="nameRegister"  id="nameRegister" placeholder="&#xf007; tu nombre" />
                 <label class="error-name-msg-hidden">Nombre introducido inválido</label>
               </div>
               <div class="form-group">
                 <label for="emailRegister">Email</label>
-                <input type="email" class="form-control" name="emailRegister" id="emailRegister"
-                  placeholder="&#xf0e0; tu@email.com" />
+                <input type="email" class="form-control" name="emailRegister" id="emailRegister" placeholder="&#xf0e0; tu@email.com" />
                 <label class="error-email-msg-hidden">Email introducido inválido</label>
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Contraseña</label>
-                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister"
-                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
-                <label class="error-pass-msg-hidden">Contraseña introducida inválida</label>
+                <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
+                <label class="error-pass-msg-hidden">Contraseña introducida inválida (debe contener al menos, 6 caracteres o más, una mayuscula, una minúscula y un caracter numérico)</label>
               </div>
               <div class="form-group">
                 <label for="passwordRegister">Repite tu contraseña</label>
-                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister"
-                  placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;" />
+                <input type="password" class="form-control" name="passwordRepeatRegister" id="passwordRepeatRegister" placeholder="&#xf023;  &bull;&bull;&bull;&bull;&bull;&bull;"/>
                 <label class="error-passrep-msg-hidden">Las contraseñas no coinciden</label>
               </div>
               <button class="btn register-btn">Crear cuenta</button>
             </form>
             <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
           </div>
+
+          <div class="reset-password-block">
+            <h2>Reestablecer contraseña</h2>
+            <form action="POST" class="reset-password-form" id="reset-password-form">
+              <div class="form-group reset-password">
+                <label for="emailReset">Email</label>
+                <input type="email" class="form-control" name="emailReset" id="emailReset" placeholder="&#xf0e0; tu@email.com" />
+              </div>
+              <button class="btn register-btn">Enviar correo electrónico</button>
+            </form>
+            <a href="#" class="toggle-login-register">¿Ya tienes una cuenta? Inicia sesión</a>
+          </div>
+
         </div>
         <svg style="margin-bottom: -10px" xmlns="http://www.w3.org/2000/svg" viewbox="0 64 1440 256">
           <path fill="#00cba9" fill-opacity="1"
@@ -129,11 +163,11 @@
         </svg>
       </div>
     </div>
+
   </header>
   <!-- Fin del NAV, inicio CLEANER PROFILE -->
   <section class="cleaner-profile">
     <!-- Botón de volver -->
-    <a href="javascript: history.go(-1)" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
     <div class="cleaner-profile-container">
       <div class="cleaner-image">
         <!-- imagen -->
@@ -247,7 +281,6 @@
       <small>&copy; 2022 <b> Clean2Home </b> - Todos los Derechos Reservados </small>
     </div>
   </footer>
-  <script type="module" src="components/cleaners-profile.js"></script>
 </body>
 
 </html>
