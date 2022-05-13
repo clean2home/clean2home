@@ -276,29 +276,6 @@
   #MEDIA QUERIES CENTRADO
 \*----------------------------------- */
 @media (max-width: 1024px) {
-  .navbar-list {
-    flex-wrap: wrap;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    margin: 0.5em;
-
-    & a::after {
-      margin-top: 0.5em;
-    }
-
-    & a:hover::after {
-      width: 30%;
-    }
-  }
-
   .active {
     display: block;
     margin-top: 1em;
@@ -384,12 +361,6 @@
 }
 
 @media (max-width: 500px) {
-  .navbar-list {
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 2em;
-  }
-
   .footer-nav {
     flex-direction: column;
     padding: 2em;
