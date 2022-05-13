@@ -9,7 +9,7 @@ function deleteAccents(string) {
   return string.toLowerCase().split("").map(word => accents[word] || word).join("").toString();
 }
 
-const getCleaners = async() => {
+const getCleaners = async () => {
   const cleaners = [];
   const collRef = collection(db, "cleaners");
   const querySnapshot = await getDocs(collRef);
@@ -23,7 +23,7 @@ const getCleaners = async() => {
   return cleaners;
 };
 
-const printCleaners = async() => {
+const printCleaners = async () => {
   const cleaners = await getCleaners();
 
   const shortComment = (element) => { // Se le pasa un elemento directamente
@@ -50,7 +50,7 @@ const printCleaners = async() => {
     </div >
     <div class="cleaner-btn"><!-- precio/boton -->
       <p class="price"><strong> ${cleaner.price}</strong><small>€/hora</small></p>
-      <a href="/under-construction.html" class="btn hire">Contratar</a>
+      <a href="/cleaners-profile.html?id=${cleaner.id}" class="btn hire">Contratar</a>
     </div>
     </div >
     `;
@@ -61,7 +61,7 @@ const printCleaners = async() => {
   descriptionParagraph.forEach(e => shortComment(e));
 };
 
-const printCleanersWithFilter = async() => {
+const printCleanersWithFilter = async () => {
   const urlParams = new URLSearchParams(queryString);
   const cityFilter = deleteAccents(urlParams.get("cityFilter"));
   console.log(queryString);
@@ -94,7 +94,7 @@ const printCleanersWithFilter = async() => {
       </div >
       <div class="cleaner-btn"><!-- precio/boton -->
       <p class="price"><strong> ${doc.data().price}</strong><small>€/hora</small></p>
-      <a href="/under-construction.html" class="btn hire">Contratar</a>
+      <a href="/cleaners-profile.html?id=${doc.id}" class="btn hire">Contratar</a>
       </div>
       </div > `;
       divContainerCards.innerHTML += cleanerCard;

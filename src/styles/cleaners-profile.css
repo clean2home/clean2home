@@ -193,10 +193,12 @@ label {
   overflow: hidden;
 }
 
-.cleaner-image>img {
+.cleaner-image > img {
   width: auto;
   height: auto;
   border-radius: 10%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .cleaner-name {
@@ -222,20 +224,35 @@ label {
   font-size: 1.6em;
 }
 
+.cleaner-location-city a {
+  display: flex;
+  color: #313230;
+  justify-content: center;
+  align-items: center;
+}
+
 .cleaner-location-city i {
   font-size: 1.2em;
   position: relative;
   top: 5px;
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   color: var(--color-primary);
 }
 
+.works-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .rating {
+    font-size: 1.5em;
+  }
+}
+
 .cp-profile {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 0.6em;
   position: relative;
-  left: 38px;
 }
 
 .price {
@@ -370,8 +387,8 @@ label {
 
 #maps iframe {
   height: 100%;
-  width: 100%;
-  max-width: 960px;
+  width: 120%;
+  max-width: 1220px;
   border-radius: 8px;
   border-style: none;
   box-shadow: 3px 4px 9px 2px #0000001e;
@@ -562,7 +579,7 @@ p.modal-data {
     overflow: hidden;
   }
 
-  .cleaner-image>img {
+  .cleaner-image > img {
     width: auto;
     height: auto;
     border-radius: 10%;
@@ -590,7 +607,7 @@ p.modal-data {
     height: 310px;
   }
 
-  .cleaner-image>img {
+  .cleaner-image > img {
     border-radius: 20%;
   }
 
@@ -691,8 +708,6 @@ p.modal-data {
   .footer {
     margin-top: 90%;
   }
-
-
 }
 
 @media (max-width: 500px) {
@@ -719,5 +734,4 @@ p.modal-data {
   .footer {
     margin-top: 130%;
   }
-
 }
