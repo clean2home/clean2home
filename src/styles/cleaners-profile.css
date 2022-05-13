@@ -536,29 +536,6 @@ p.modal-data {
 \*----------------------------------- */
 
 @media (max-width: 1024px) {
-  .navbar-list {
-    flex-wrap: wrap;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    margin: 0.5em;
-
-    & a::after {
-      margin-top: 0.5em;
-    }
-
-    & a:hover::after {
-      width: 30%;
-    }
-  }
-
   .active {
     display: block;
     margin-top: 1em;
